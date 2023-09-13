@@ -140,3 +140,17 @@ a line, button line {
   justify-content: center;
   align-items: center;
 }
+
+/* VIEWPORT-BASED LAYOUTS /////////////////////////////// */
+.vp {
+  width: 100vw;
+  height: 100dvh;
+}
+
+.vp-layer {
+  width: 100vw;
+  height: 100dvh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

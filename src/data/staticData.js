@@ -1,3 +1,3 @@
 export const layout = {
-  landscapeBreakpoint: 1600,
+  landscapeBreakpoint: 2000,
 };

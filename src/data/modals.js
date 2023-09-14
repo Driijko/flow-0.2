@@ -2,10 +2,12 @@ import { writable, get } from "svelte/store";
 
 // STATE ---------------------------------
 export const interfaceModal = writable(true);
+export const interfaceArea = writable(true);
 
 // MAP ------------------------------------
 const map = {
-  siteMenu: interfaceModal,
+  interfaceModal: interfaceModal,
+  interfaceArea: interfaceArea,
 };
 
 // FUNCTIONS ---------------------------------

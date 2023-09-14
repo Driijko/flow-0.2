@@ -6,7 +6,7 @@
   import InterfaceModal from "./interface/InterfaceModal.svelte";
 
 
-  const { mobileToolbarSize } = layout;
+  const { mobileToolbarHeight } = layout;
 
 </script>
 
@@ -20,10 +20,10 @@
 {#if $breakpoint === "mobile"}
   <div class="vp-layer">
     <div class="content-container"
-      style:height={`${100 - mobileToolbarSize}%`}
+      style:height={`${100 - mobileToolbarHeight}%`}
     ></div>
     <div class="toolbar-container"
-      style:height={`${mobileToolbarSize}%`}
+      style:height={`${mobileToolbarHeight}%`}
     ></div>
   </div>
 
@@ -31,9 +31,19 @@
 
 <!-- SMALL DESKTOP ------------------------------------ -->
 {:else if $breakpoint === "small-desktop"}
-  <p>hi</p>
+  <div class="vp-layer content-container"></div>
+  <InterfaceModal />
+  <div class="toolbar-container"
+    style:position="absolute"
+    style:top="0%"
+    style:right="0%"
+  ></div>
+
+<!-- LARGE DESKTOP ----------------------------------- -->
 {:else if $breakpoint === "large-desktop"}
-  <p>nope</p>
+  <div class="vp-layer"
+    style:display="flex"
+  ></div>
 {/if}
 
 <!-- STYLES ///////////////////////////////////////////////////// -->

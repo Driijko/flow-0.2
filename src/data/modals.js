@@ -1,11 +1,11 @@
 import { writable, get } from "svelte/store";
 
 // STATE ---------------------------------
-export const siteMenuModal = writable(false);
+export const interfaceModal = writable(false);
 
 // MAP ------------------------------------
 const map = {
-  siteMenu: siteMenuModal,
+  siteMenu: interfaceModal,
 };
 
 // FUNCTIONS ---------------------------------

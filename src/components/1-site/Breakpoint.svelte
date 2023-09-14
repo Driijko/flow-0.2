@@ -3,6 +3,8 @@
   // IMPORTS ---------------------------------------------
   import { breakpoint } from "../../data/breakpoint";
   import { layout } from "../../data/staticData";
+  import InterfaceModal from "./interface/InterfaceModal.svelte";
+
 
   const { mobileToolbarSize } = layout;
 
@@ -24,6 +26,8 @@
       style:height={`${mobileToolbarSize}%`}
     ></div>
   </div>
+
+  <InterfaceModal />
 
 <!-- SMALL DESKTOP ------------------------------------ -->
 {:else if $breakpoint === "small-desktop"}

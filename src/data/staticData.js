@@ -1,9 +1,14 @@
 // AR = aspect-ratio
+// MO = mobile
+// SD = small-desktop
+// LD = large-desktop
 export const layout = {
   portraitAR: {width: 9, height: 16},
   landscapeAR: {width: 16, height: 9},
-  landscapeBreakpoint: 2000, // px viewport width
-  mobileToolbarHeight: 8, // percentage of layer
-  smallDesktopToolbarSize: 5, //percentage of layer
+  toolbarHeightMO: 8, // percentage of layer
+  toolbarButtonSizeSD: 5, //percentage of layer
+  breakpointLD: 2000, // px viewport width
   interfaceAreaWidth: 25, // percentage of viewport width
+  interfaceAreaPadding: 20, // percentage of interface area
+  contentAreaPadding: 15,
 };

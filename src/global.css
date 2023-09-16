@@ -141,6 +141,11 @@ a line, button line {
   align-items: center;
 }
 
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
 /* VIEWPORT-BASED LAYOUTS /////////////////////////////// */
 .vp {
   width: 100vw;

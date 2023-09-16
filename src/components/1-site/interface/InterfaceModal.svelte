@@ -7,14 +7,12 @@
 
 <!-- MARKUP ///////////////////////////////////////////////////// -->
 {#if $interfaceModal}
-  <div class="vp-layer center">interface</div>
+  <div class="vp-layer center fill">interface</div>
 {/if}
 
 <!-- STYLES ////////////////////////////////////////////////////// -->
 <style>
 div {
-  width: 100%;
-  height: 100%;
   border: 4px solid yellow;
 }
 </style>

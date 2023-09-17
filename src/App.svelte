@@ -2,7 +2,7 @@
 <script>
   // IMPORTS -----------------------------------------------
   import setUp from "./scripts/viewport/setUp";
-  import Breakpoint from "./components/1-site/Breakpoint.svelte";
+  import OpeningRouter from "./components/1-site/Routers/OpeningRouter.svelte";
 
   // SET UP -----------------------------------------------
   setUp();
@@ -10,4 +10,4 @@
 </script>
 
 <!-- MARKUP ////////////////////////////////////////////// -->
-<Breakpoint />
+<OpeningRouter />

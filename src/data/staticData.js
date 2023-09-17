@@ -10,5 +10,8 @@ export const layout = {
   breakpointLD: 2000, // px viewport width
   interfaceAreaWidth: 25, // percentage of viewport width
   interfaceAreaPadding: 20, // percentage of interface area
+  toolbarHeightLD: 15, // percentage of interface container height
   contentAreaPadding: 15,
 };
+
+export const startingPageName = "loading";

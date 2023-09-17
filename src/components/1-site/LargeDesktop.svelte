@@ -7,7 +7,7 @@
   import { interfaceArea } from "../../data/modals";
 
   const {portraitAR, landscapeAR, toolbarHeightMO, interfaceAreaWidth,
-  interfaceAreaPadding, contentAreaPadding } = layout;
+  interfaceAreaPadding, contentAreaPadding, toolbarHeightLD } = layout;
 
   // AREA RESIZING ----------------------------------------------
   // Element References -----
@@ -62,7 +62,7 @@
     ></div>
     <div class="toolbar-container"
       style:width={`${interfaceContainerAR.width}px`}
-      style:height={`${toolbarHeightMO}%`}
+      style:height={`${interfaceContainerAR.height * (toolbarHeightLD * 0.01)}px`}
     ></div>
   </div>
 

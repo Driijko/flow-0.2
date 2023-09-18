@@ -1,11 +1,12 @@
 <!-- SCRIPTS /////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------
-  import SiteSettings from "../5-structures/SiteSettings.svelte";
+  import SiteSettings from "../4-structures/SiteSettings.svelte";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-  import { setPageExit, newPage } from "../../data/currentPageStore";
-  import { audioBkgLoad, audioBkgLoadPlay, audioBkgPaused } from "../../data/audioBkgStore";
+  import { setPageExit, newPage } from "../../data/currentPage";
+  import { audioBkgLoad, audioBkgLoadPlay, audioBkgPaused } 
+  from "../../data/audioBkg";
 
   // ANIMATION --------------------------------------------------
   function pageEntrance() {
@@ -77,7 +78,7 @@
     <path d="M 50 -10 Q 60 50 50 110"/>
   </svg>
   <div class="opening-prompt-content">
-    <p>Welcome to Ritual Ceramics.</p>
+    <p>Welcome to Blah Blah Blah.</p>
     <p>
       For the fullest experience,<br/> turning on background audio<br/> is recommended.
     </p>
@@ -103,7 +104,7 @@
 path {
   fill: transparent;
   stroke-width: 70;
-  stroke: hsla(var(--hue1), 100%, 50%, 0.2);
+  stroke: hsla(0, 100%, 50%, 0.2);
 }
 .opening-prompt-content {
   font-size: 21px;
@@ -111,9 +112,9 @@ path {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  gap: calc(var(--vph) * 0.02);
-  background-color: hsla(var(--hue2), 100%, 10%, 0.7);
-  color: hsl(var(--hue1), 100%, 66%);
+  gap: calc(100dvh * 0.02);
+  background-color: hsla(200, 100%, 10%, 0.7);
+  color: hsl(300, 100%, 66%);
   overflow: hidden;
 }
 @media screen and (min-height: 480px) {
@@ -139,11 +140,11 @@ p {
   font-size: 20px;
 }
 #page1 :global(input[type="checkbox"]) {
-  border: 3px solid hsl(var(--hue1), 100%, 66%);
+  border: 3px solid hsl(300, 100%, 66%);
   height: 50px;
   width: 50px;
   border-radius: 7px;
-  background-color: hsl(var(--hue2), 100%, 5%);
+  background-color: hsl(200, 100%, 5%);
 }
 #page1 :global(.volume-adjust) {
   display: flex;

@@ -12,9 +12,9 @@
 </script>
 
 <!-- MARKUP ////////////////////////////////////////////// -->
-<!-- <OpeningRouter /> -->
 <AudioBkg />
-<Breakpoint />
+<OpeningRouter />
+<!-- <Breakpoint /> -->
 
 <!-- STYLES //////////////////////////////////////////// -->
 <style>

@@ -9,9 +9,9 @@ export const layout = {
   toolbarButtonSizeSD: 5, //percentage of layer
   breakpointLD: 2000, // px viewport width
   interfaceAreaWidth: 25, // percentage of viewport width
-  interfaceAreaPadding: 20, // percentage of interface area
-  toolbarHeightLD: 15, // percentage of interface container height
-  contentAreaPadding: 15,
+  interfaceAreaPadding: 0.8, // reverse percentage of content area (0.8 = 20%)
+  toolbarHeightLD: 0.15, // percentage of interface container height
+  contentAreaPadding: 0.85, //  reverse percentage of content area (0.85 = 15%)
 };
 
 export const startingPageName = "loading";

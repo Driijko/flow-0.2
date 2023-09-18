@@ -6,13 +6,16 @@ import calcUARR from "../utils/calcUARR";
 const {portraitAR, landscapeAR, toolbarHeightMO, breakpointLD, 
 interfaceAreaPadding, interfaceAreaWidth, contentAreaPadding } = layout;
 
+// We export the large desktop function seperately so it can be triggered
+// by resizing of the content area div.
 export function viewportCSSLD() {
+
+  const interfaceAreaWidthDecimal = interfaceAreaWidth * 0.01;
 
   // Interface -----
   const portraitUARRInterface = calcUARR(
-    (window.innerWidth * (interfaceAreaWidth * 0.01)) 
-    * (1 - (interfaceAreaPadding * 0.01)), 
-    window.innerHeight * (1 - (interfaceAreaPadding * 0.01)),
+    (window.innerWidth * interfaceAreaWidthDecimal) * interfaceAreaPadding, 
+    window.innerHeight * interfaceAreaPadding,
     portraitAR.width, portraitAR.height
   );
   document.documentElement.style.setProperty(
@@ -25,10 +28,9 @@ export function viewportCSSLD() {
   // Content -----
   const landscapeUARRContent = calcUARR(
     get(interfaceArea) ? 
-    window.innerWidth * (1 - (interfaceAreaWidth * 0.01))
-    * (1 - (contentAreaPadding * 0.01))
-    : window.innerWidth * (1 - (contentAreaPadding * 0.01)),
-    window.innerHeight * (1 - (contentAreaPadding * 0.01)),
+      window.innerWidth * (1 - interfaceAreaWidthDecimal)* contentAreaPadding
+      : window.innerWidth * contentAreaPadding,
+    window.innerHeight * contentAreaPadding,
     landscapeAR.width, landscapeAR.height
   );
   document.documentElement.style.setProperty(

@@ -160,11 +160,13 @@ a line, button line {
   top: 0;
 }
 
+/* Content UARR */
 .cuarr {
   width: var(--cw);
   height: var(--ch);
 }
 
+/* Interface UARR */
 .iuarr {
   width: var(--iw);
   height: var(--ih);

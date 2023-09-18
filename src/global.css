@@ -160,6 +160,16 @@ a line, button line {
   top: 0;
 }
 
+.cuarr {
+  width: var(--cw);
+  height: var(--ch);
+}
+
+.iuarr {
+  width: var(--iw);
+  height: var(--ih);
+}
+
 /* ANIMATIONS ////////////////////////////////////////////////// */
 @keyframes fadeIn {
   from { opacity: 0; }

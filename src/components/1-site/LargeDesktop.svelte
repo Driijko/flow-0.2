@@ -4,7 +4,8 @@
   import { onMount } from "svelte";
   import calcUARR from "../../scripts/utils/calcUARR";
   import { layout } from "../../data/staticData";
-  import { interfaceArea } from "../../data/modals";
+  import { viewportCSSLD } from "../../scripts/viewport/viewportCSS";
+  import { interfaceArea, modals } from "../../data/modals";
 
   const {portraitAR, landscapeAR, toolbarHeightMO, interfaceAreaWidth,
   interfaceAreaPadding, contentAreaPadding, toolbarHeightLD } = layout;
@@ -15,33 +16,34 @@
   let interfaceAreaElement;
 
   // Intialize Responsive Variables ----
-  $: contentContainerAR = {width: 0, height: 0};
-  $: interfaceContainerAR = {width: 0, height: 0};
+  // $: contentContainerAR = {width: 0, height: 0};
+  // $: interfaceContainerAR = {width: 0, height: 0};
 
   // Resize Callback (iterated in the order added) ----
-  const resizeObserver = new ResizeObserver(entries => {
-    entries.forEach((entry, index)=> {
-      if (index === 0) {
-        contentContainerAR = calcUARR(
-          entry.contentRect.width * (1 - (contentAreaPadding * 0.01)),
-          entry.contentRect.height * (1 - (contentAreaPadding * 0.01)),
-          landscapeAR.width,
-          landscapeAR.height
-        );
-      } else if (index === 1) {
-        interfaceContainerAR = calcUARR(
-          entry.contentRect.width * (1 - (interfaceAreaPadding * 0.01)),
-          entry.contentRect.height * (1 - (interfaceAreaPadding * 0.01)),
-          portraitAR.width,
-          portraitAR.height
-        );
-      };
-    });
-  });
+  const resizeObserver = new ResizeObserver(viewportCSSLD);
+  // const resizeObserver = new ResizeObserver(entries => {
+  //   entries.forEach((entry, index)=> {
+  //     if (index === 0) {
+  //       contentContainerAR = calcUARR(
+  //         entry.contentRect.width * (1 - (contentAreaPadding * 0.01)),
+  //         entry.contentRect.height * (1 - (contentAreaPadding * 0.01)),
+  //         landscapeAR.width,
+  //         landscapeAR.height
+  //       );
+  //     } else if (index === 1) {
+  //       interfaceContainerAR = calcUARR(
+  //         entry.contentRect.width * (1 - (interfaceAreaPadding * 0.01)),
+  //         entry.contentRect.height * (1 - (interfaceAreaPadding * 0.01)),
+  //         portraitAR.width,
+  //         portraitAR.height
+  //       );
+  //     };
+  //   });
+  // });
 
   // Observe Elements ----
   onMount(()=> {
-    resizeObserver.observe(contentAreaElement);
+    // resizeObserver.observe(contentAreaElement);
     resizeObserver.observe(interfaceAreaElement);
   });
 
@@ -56,13 +58,10 @@
     style:width={$interfaceArea ? `${interfaceAreaWidth}%` : "0%"}
     style:flex-shrink="0"
   >
-    <div class="interface-container"
-      style:width={`${interfaceContainerAR.width}px`}
-      style:height={`${interfaceContainerAR.height}px`}
-    ></div>
+    <div class="interface-container iuarr"></div>
     <div class="toolbar-container"
-      style:width={`${interfaceContainerAR.width}px`}
-      style:height={`${interfaceContainerAR.height * (toolbarHeightLD * 0.01)}px`}
+      style:width="var(--iw)"
+      style:height={`calc(var(--ih) * ${toolbarHeightLD * 0.01})`}
     ></div>
   </div>
 
@@ -70,10 +69,8 @@
   <div class="content-area center" bind:this={contentAreaElement}
     style:width={$interfaceArea ? `${100 - interfaceAreaWidth}%`: "100%"}
   >
-    <div class="content-container" 
-      style:width={`${contentContainerAR.width}px`}
-      style:height={`${contentContainerAR.height}px`}
-    >
+    <div class="content-container cuarr center">
+      <button type="button" on:click={()=> modals.toggle("interfaceArea")}>CLICK ME</button>
     </div>
   </div>
 </div>
@@ -82,6 +79,9 @@
 <style>
   .content-container {
     background-color: hsla(0, 100%, 50%, 1);
+    transition-property: width, height;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
   }
   .toolbar-container {
     background-color: black;

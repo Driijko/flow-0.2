@@ -5,6 +5,7 @@
   import { layout } from "../../data/staticData";
   import { viewportCSSLD } from "../../scripts/viewport/viewportCSS";
   import { interfaceArea } from "../../data/modals";
+  import InterfaceAreaButton from "../5-elements/modal/InterfaceAreaButton.svelte";
 
   const {interfaceAreaWidth,toolbarHeightLD } = layout;
 
@@ -27,6 +28,7 @@
   style:display="flex"
 >
   <!-- INTERFACE AREA ------------------------------------- -->
+  <InterfaceAreaButton />
   <div class="interface-area center" bind:this={interfaceAreaElement}
     style:width={$interfaceArea ? `${interfaceAreaWidth}%` : "0%"}
     style:flex-shrink="0"
@@ -48,27 +50,45 @@
 
 <!-- STYLES ///////////////////////////////////////////////////// -->
 <style>
-  .content-container {
-    background-color: hsla(0, 100%, 50%, 1);
-    transition-property: width, height;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-  }
-  .toolbar-container {
-    background-color: black;
-  }
-  .interface-container {
-    background-color: red;
-  }
-  .interface-area {
-    flex-direction: column;
-    background-color: blue;
-    border: 10px solid red;
-    transition: width 0.5s ease-out;
-  }
-  .content-area {
-    background-color: orange;
-    border: 10px solid green;
-    transition: width 0.5s ease-out;
-  }
-  </style>
+:global(.interface-area-button) {
+  position: fixed;
+  top: 0;
+  width: 40px;
+  height: 100dvh;
+  background-color: hsla(0, 100%, 0%, 0.8);
+  color: white;
+  z-index: 1;
+  padding-right: 0.4%;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+:global(.interface-area-button.open) {
+  background-color: transparent;
+  color: black;
+}
+:global(.interface-area-button svg) {
+  width: 80%;
+}
+.content-container {
+  background-color: hsla(0, 100%, 50%, 1);
+  transition-property: width, height;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+}
+.toolbar-container {
+  background-color: black;
+}
+.interface-container {
+  background-color: red;
+}
+.interface-area {
+  flex-direction: column;
+  background-color: pink;
+  transition: width 0.5s ease-out;
+}
+.content-area {
+  background-color: orange;
+  transition: width 0.5s ease-out;
+}
+</style>

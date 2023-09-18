@@ -1,0 +1,46 @@
+<!-- SCRIPTS /////////////////////////// -->
+<script>
+  // IMPORTS -----------------------------------------
+  import { gsap } from "gsap";
+  import { onMount } from "svelte";
+  import { interfaceArea, modals } from "../../../data/modals";
+  import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
+
+  // ANIMATION -------------------------------------
+  let animation;
+
+  onMount(()=> {
+    animation = (state,duration) => {
+      gsap.set(".interface-area-button svg", {transformOrigin: "65% 50%"});
+      if (state === "close") {
+        gsap.to(".interface-area-button svg", {
+          duration: duration,
+          rotate: 0,
+        });
+      } else {
+        gsap.to(".interface-area-button svg", {
+          duration: duration,
+          rotate: 180,
+        });
+      };
+    };
+  });
+
+  // REACTIVE -------------------------------
+  $: if (animation) {
+    if ($interfaceArea) {
+      animation("open", 0.5);
+    } else {
+      animation("close", 0.5);
+    }
+  };
+
+</script>
+
+<!-- MARKUP ///////////////////////////////////////// -->
+<button class="interface-area-button" type="button"
+  class:open={$interfaceArea}
+  on:click={()=> modals.toggle("interfaceArea")}
+>
+  <RightArrow />
+</button>

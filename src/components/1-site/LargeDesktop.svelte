@@ -7,7 +7,7 @@
   import { interfaceArea } from "../../data/modals";
   import InterfaceAreaButton from "../5-elements/modal/InterfaceAreaButton.svelte";
 
-  const {interfaceAreaWidth,toolbarHeightLD } = layout;
+  const { interfaceAreaWidth, toolbarHeightLD } = layout;
 
   // AREA RESIZING ----------------------------------------------
   // Element Reference -----

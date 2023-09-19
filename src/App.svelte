@@ -5,6 +5,8 @@
   import OpeningRouter from "./components/1-site/Routers/OpeningRouter.svelte";
   import Breakpoint from "./components/1-site/Breakpoint.svelte";
   import AudioBkg from "./components/1-site/AudioBkg.svelte";
+  import { audioBkgTrack, audioBkgPaused, audioBkgVolume, audioBkgLoadPlay, audioBkgUpdateTotalTime, audioBkgPlayAfterLoad, audioBkgLoop, audioBkgCurrentTime, audioBkgCurrentPlaylist, audioBkgCurrentPlaylistIndex, audioBkgNextPlaylistTrack, audioBkgFinishLoading
+  } from "./data/audioBkg";
 
   // SET UP -----------------------------------------------
   setUp();
@@ -13,8 +15,9 @@
 
 <!-- MARKUP ////////////////////////////////////////////// -->
 <AudioBkg />
-<OpeningRouter />
-<!-- <Breakpoint /> -->
+<p>
+  {$audioBkgVolume}
+</p>
 
 <!-- STYLES //////////////////////////////////////////// -->
 <style>

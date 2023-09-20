@@ -4,6 +4,7 @@
   import { layout } from "../../../static/siteSettings";
   import { breakpoint } from "../../../dynamic/breakpoint";
   import { interfaceModal } from "../../../dynamic/modals";
+  import Toolbar from "../Toolbar.svelte";
   import InterfaceModal from "../interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
 
@@ -25,7 +26,9 @@
     ></div>
     <div class="toolbar-container" inert={$interfaceModal}
       style:height={`${toolbarHeightMO}%`}
-    ></div>
+    >
+      <Toolbar />
+    </div>
   </div>
 
   <InterfaceModal />

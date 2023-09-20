@@ -72,17 +72,8 @@
 
 <!-- MARKUP ///////////////////////////////////////////////// -->
 <button class="audio-bkg-pause-play-button" type="button" on:click={handleClick}>
-  <svg viewBox="0 0 100 100">
+  <svg viewBox="0 0 100 100" class="fill">
     <path/>
     <path/>
   </svg>
 </button>
-
-
-<!-- STYLES ///////////////////////////////////////////////////// -->
-<style>
-svg {
-  width: 100%; 
-  height: 100%;
-}
-</style>

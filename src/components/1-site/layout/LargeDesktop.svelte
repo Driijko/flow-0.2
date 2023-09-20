@@ -2,10 +2,10 @@
 <script>
   // IMPORTS --------------------------------------------------
   import { onMount } from "svelte";
-  import { layout } from "../../static/siteSettings";
-  import { viewportCSSLD } from "../../scripts/viewport/viewportCSS";
-  import { interfaceArea } from "../../dynamic/modals";
-  import InterfaceAreaButton from "../5-elements/modal/InterfaceAreaButton.svelte";
+  import { layout } from "../../../static/siteSettings";
+  import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
+  import { interfaceArea } from "../../../dynamic/modals";
+  import InterfaceAreaButton from "./InterfaceAreaButton.svelte";
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;
 
@@ -50,26 +50,6 @@
 
 <!-- STYLES ///////////////////////////////////////////////////// -->
 <style>
-:global(.interface-area-button) {
-  position: fixed;
-  top: 0;
-  width: 40px;
-  height: 100dvh;
-  background-color: hsla(0, 100%, 0%, 0.8);
-  color: white;
-  z-index: 1;
-  padding-right: 0.4%;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
-}
-:global(.interface-area-button.open) {
-  background-color: transparent;
-  color: black;
-}
-:global(.interface-area-button svg) {
-  width: 80%;
-}
 .content-container {
   background-color: hsla(0, 100%, 50%, 1);
   transition-property: width, height;

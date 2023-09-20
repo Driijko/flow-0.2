@@ -99,7 +99,7 @@
   position: absolute;
   z-index: -1;
   width: 100vw;
-  height: var(--vph);
+  height: 100dvh;
 }
 path {
   fill: transparent;

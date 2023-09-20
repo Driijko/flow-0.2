@@ -44,3 +44,27 @@
 >
   <RightArrow />
 </button>
+
+<!-- STYLES //////////////////////////////////////// -->
+<style>
+.interface-area-button {
+  position: fixed;
+  top: 0;
+  width: 40px;
+  height: 100dvh;
+  background-color: hsla(0, 100%, 0%, 0.8);
+  color: white;
+  z-index: 1;
+  padding-right: 0.4%;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+.interface-area-button.open {
+  background-color: transparent;
+  color: black;
+}
+.interface-area-button :global(svg) {
+  width: 80%;
+}
+</style>

@@ -3,7 +3,7 @@
   // IMPORTS -----------------------------------------
   import { gsap } from "gsap";
   import { onMount } from "svelte";
-  import { interfaceArea, modals } from "../../../dynamic/modals";
+  import { interfaceModal, modals } from "../../../dynamic/modals";
   import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
 
   // ANIMATION -------------------------------------
@@ -28,7 +28,7 @@
 
   // REACTIVE -------------------------------
   $: if (animation) {
-    if ($interfaceArea) {
+    if ($interfaceModal) {
       animation("open", 0.5);
     } else {
       animation("close", 0.5);
@@ -39,8 +39,8 @@
 
 <!-- MARKUP ///////////////////////////////////////// -->
 <button class="interface-area-button" type="button"
-  class:open={$interfaceArea}
-  on:click={()=> modals.toggle("interfaceArea")}
+  class:open={$interfaceModal}
+  on:click={()=> modals.toggle("interfaceModal")}
 >
   <RightArrow />
 </button>

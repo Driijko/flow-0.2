@@ -4,7 +4,7 @@
   import { onMount } from "svelte";
   import { layout } from "../../../static/siteSettings";
   import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
-  import { interfaceArea } from "../../../dynamic/modals";
+  import { interfaceModal } from "../../../dynamic/modals";
   import InterfaceAreaButton from "./InterfaceAreaButton.svelte";
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;
@@ -30,7 +30,7 @@
   <!-- INTERFACE AREA ------------------------------------- -->
   <InterfaceAreaButton />
   <div class="interface-area center" bind:this={interfaceAreaElement}
-    style:width={$interfaceArea ? `${interfaceAreaWidth}%` : "0%"}
+    style:width={$interfaceModal ? `${interfaceAreaWidth}%` : "0%"}
     style:flex-shrink="0"
   >
     <div class="interface-container iuarr"></div>
@@ -42,7 +42,7 @@
 
   <!-- CONTENT AREA ----------------------------------------- -->
   <div class="content-area center"
-    style:width={$interfaceArea ? `${100 - interfaceAreaWidth}%`: "100%"}
+    style:width={$interfaceModal ? `${100 - interfaceAreaWidth}%`: "100%"}
   >
     <div class="content-container cuarr"></div>
   </div>

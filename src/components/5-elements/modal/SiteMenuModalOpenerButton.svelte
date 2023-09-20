@@ -1,8 +1,13 @@
 <!-- SCRIPTS ////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------------
-  import { modals } from "../../../dynamic/modals";
+  import { modals, interfaceModal } from "../../../dynamic/modals";
   import MenuIcon from "../../6-icons/interface/MenuIcon.svelte";
+
+  // EVENT HANDLERS ---------------------------------------------
+  function handleClick() {
+
+  }
 
 </script>
 

@@ -4,7 +4,7 @@
   import { layout } from "../../../static/siteSettings";
   import { breakpoint } from "../../../dynamic/breakpoint";
   import { interfaceModal } from "../../../dynamic/modals";
-  import Toolbar from "../Toolbar.svelte";
+  import Toolbar from "../toolbar/Toolbar.svelte";
   import InterfaceModal from "../interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
 

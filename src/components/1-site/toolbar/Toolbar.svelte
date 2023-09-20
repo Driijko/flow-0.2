@@ -1,25 +1,29 @@
 <!-- SCRIPTS /////////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------
-  import { breakpoint } from "../../dynamic/breakpoint";
+  import { breakpoint } from "../../../dynamic/breakpoint";
   import SiteMenuModalOpenerButton 
-  from "../5-elements/modal/SiteMenuModalOpenerButton.svelte";
+  from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
   import SiteMenuModalToggleButton 
-  from "../5-elements/modal/SiteMenuModalToggleButton.svelte";
-  import { layout } from "../../static/siteSettings";
+  from "../../5-elements/modal/SiteMenuModalToggleButton.svelte";
+  import ToolbarMO from "./ToolbarMO.svelte";
+  import { layout } from "../../../static/siteSettings";
 
   const { toolbarButtonSizeSD } = layout;
 
 </script>
 
 <!-- MARKUP ///////////////////////////////////////////////// -->
-<menu class="fill center"
+{#if $breakpoint === "mobile"}
+  <ToolbarMO />
+{/if}
+<!-- <menu class="fill center"
   class:sd={$breakpoint === "small-desktop"}
   style:--tbs={toolbarButtonSizeSD}
 >
-  <!-- <SiteMenuModalOpenerButton /> -->
+  <SiteMenuModalOpenerButton />
   <SiteMenuModalToggleButton />
-</menu>
+</menu> -->
 
 <!-- STYLES //////////////////////////////////////////////// -->
 <style>

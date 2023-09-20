@@ -1,4 +1,4 @@
-import { updateBreakpoint } from "../../data/breakpoint";
+import { updateBreakpoint } from "../../dynamic/breakpoint";
 import { viewportCSS } from "./viewportCSS";
 
 export default function updateOnResize() {

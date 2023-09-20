@@ -3,7 +3,7 @@
   import AudioBkgPausePlayButton 
   from "../../5-elements/audio-bkg/AudioBkgPausePlayButton.svelte";
   import AudioBkgTimer from "./AudioBkgTimer.svelte";
-  import { audioBkgTrack } from "../../../data/audioBkg";
+  import { audioBkgTrack } from "../../../dynamic/audioBkg";
 </script>
 
 <!-- MARKUP //////////////////////////////////////////// -->

@@ -1,9 +1,9 @@
 <!-- SCRIPTS //////////////////////////////////////// -->
 <script>
   // IMPORTS ---------------------------------------------
-  import { layout } from "../../data/staticData";
-  import { breakpoint } from "../../data/breakpoint";
-  import { interfaceModal } from "../../data/modals";
+  import { layout } from "../../static/siteSettings";
+  import { breakpoint } from "../../dynamic/breakpoint";
+  import { interfaceModal } from "../../dynamic/modals";
   import InterfaceModal from "./interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
 

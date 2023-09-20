@@ -2,7 +2,7 @@
 <script>
   // IMPORTS -----------------------------------------------
   import { onMount } from "svelte";
-  import { setPageExit, newPage } from "../../data/currentPage";
+  import { setPageExit, newPage } from "../../dynamic/currentPage";
 
   // PAGE EXIT ----------------------------------
   let fade = false;

@@ -1,6 +1,6 @@
 import { get } from "svelte/store";
-import { interfaceArea } from "../../data/modals";
-import { layout } from "../../data/staticData";
+import { interfaceArea } from "../../dynamic/modals";
+import { layout } from "../../static/siteSettings";
 import calcUARR from "../utils/calcUARR";
 
 const {portraitAR, landscapeAR, toolbarHeightMO, breakpointLD, 

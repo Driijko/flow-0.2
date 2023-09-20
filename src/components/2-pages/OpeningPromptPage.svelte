@@ -4,9 +4,9 @@
   import SiteSettings from "../4-structures/SiteSettings.svelte";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-  import { setPageExit, newPage } from "../../data/currentPage";
+  import { setPageExit, newPage } from "../../dynamic/currentPage";
   import { audioBkgLoad, audioBkgLoadPlay, audioBkgPaused } 
-  from "../../data/audioBkg";
+  from "../../dynamic/audioBkg";
 
   // ANIMATION --------------------------------------------------
   function pageEntrance() {

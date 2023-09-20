@@ -4,7 +4,7 @@
   import { gsap } from "gsap";
   import { onMount } from "svelte";
   import { audioBkgTogglePausePlay, audioBkgPaused } 
-  from "../../../data/audioBkg";
+  from "../../../dynamic/audioBkg";
 
   // ANIMATION ------------------------------------
   const animationDuration = 1;

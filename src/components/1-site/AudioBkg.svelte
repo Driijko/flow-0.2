@@ -3,7 +3,7 @@
   // IMPORTS -------------------------------------------
   import { onMount } from "svelte";
   import { audioBkgTrack, audioBkgPaused, audioBkgVolume, audioBkgLoadPlay, audioBkgUpdateTotalTime, audioBkgPlayAfterLoad, audioBkgLoop, audioBkgCurrentTime, audioBkgCurrentPlaylist, audioBkgCurrentPlaylistIndex, audioBkgNextPlaylistTrack, audioBkgFinishLoading
-  } from "../../data/audioBkg";
+  } from "../../dynamic/audioBkg";
 
   // ELEMENT REFERENCE -----------------------------------
   let audioBkgElement;

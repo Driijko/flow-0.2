@@ -2,7 +2,7 @@
 <script>
   // IMPORTS -----------------------------------
   import { audioBkgCurrentTime, audioBkgTotalTime} 
-  from "../../../scripts/audioBkgStore"
+  from "../../../dynamic/audioBkg"
   
 </script>
 

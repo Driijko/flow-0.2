@@ -1,4 +1,4 @@
-import { layout } from "./staticData";
+import { layout } from "../static/siteSettings";
 import { writable } from "svelte/store";
 
 const { breakpointLD } = layout;

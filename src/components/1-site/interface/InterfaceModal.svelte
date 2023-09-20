@@ -1,7 +1,7 @@
 <!-- SCRIPTS ///////////////////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------
-  import { interfaceModal } from "../../../data/modals";
+  import { interfaceModal } from "../../../dynamic/modals";
 
 </script>
 

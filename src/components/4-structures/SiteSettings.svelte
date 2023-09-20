@@ -1,7 +1,7 @@
 <!-- SCRIPTS /////////////////////////////////////////////// -->
 <script>
   // IMPORTS ------------------------------------------
-  import { audioBkgPaused } from "../../data/audioBkg";
+  import { audioBkgPaused } from "../../dynamic/audioBkg";
   import AudioBkgCheckbox 
   from "../5-elements/audio-bkg/AudioBkgCheckbox.svelte";
   import AudioBkgVolumeSlider 

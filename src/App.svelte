@@ -6,7 +6,7 @@
   import Breakpoint from "./components/1-site/Breakpoint.svelte";
   import AudioBkg from "./components/1-site/AudioBkg.svelte";
   import { audioBkgTrack, audioBkgPaused, audioBkgVolume, audioBkgLoadPlay, audioBkgUpdateTotalTime, audioBkgPlayAfterLoad, audioBkgLoop, audioBkgCurrentTime, audioBkgCurrentPlaylist, audioBkgCurrentPlaylistIndex, audioBkgNextPlaylistTrack, audioBkgFinishLoading
-  } from "./data/audioBkg";
+  } from "./dynamic/audioBkg";
 
   // SET UP -----------------------------------------------
   setUp();

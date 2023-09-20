@@ -2,7 +2,7 @@
 <script>
   // IMPORTS -------------------------------------------------
   import { audioBkgTogglePausePlay, audioBkgPaused } 
-  from "../../../data/audioBkg";
+  from "../../../dynamic/audioBkg";
   
 </script>
 

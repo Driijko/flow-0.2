@@ -2,9 +2,9 @@
 <script>
   // IMPORTS --------------------------------------------------
   import { onMount } from "svelte";
-  import { layout } from "../../data/staticData";
+  import { layout } from "../../static/siteSettings";
   import { viewportCSSLD } from "../../scripts/viewport/viewportCSS";
-  import { interfaceArea } from "../../data/modals";
+  import { interfaceArea } from "../../dynamic/modals";
   import InterfaceAreaButton from "../5-elements/modal/InterfaceAreaButton.svelte";
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;

@@ -3,7 +3,7 @@
   // IMPORTS -----------------------------------------
   import { gsap } from "gsap";
   import { onMount } from "svelte";
-  import { interfaceArea, modals } from "../../../data/modals";
+  import { interfaceArea, modals } from "../../../dynamic/modals";
   import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
 
   // ANIMATION -------------------------------------

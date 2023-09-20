@@ -1,14 +1,24 @@
 <!-- SCRIPTS /////////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------
+  import { breakpoint } from "../../dynamic/breakpoint";
   import SiteMenuModalOpenerButton 
   from "../5-elements/modal/SiteMenuModalOpenerButton.svelte";
+  import SiteMenuModalToggleButton 
+  from "../5-elements/modal/SiteMenuModalToggleButton.svelte";
+  import { layout } from "../../static/siteSettings";
+
+  const { toolbarButtonSizeSD } = layout;
 
 </script>
 
 <!-- MARKUP ///////////////////////////////////////////////// -->
-<menu class="fill center">
-  <SiteMenuModalOpenerButton />
+<menu class="fill center"
+  class:sd={$breakpoint === "small-desktop"}
+  style:--tbs={toolbarButtonSizeSD}
+>
+  <!-- <SiteMenuModalOpenerButton /> -->
+  <SiteMenuModalToggleButton />
 </menu>
 
 <!-- STYLES //////////////////////////////////////////////// -->
@@ -17,5 +27,10 @@ menu :global(button) {
   height: 100%;
   color: white;
   padding: 2.5%;
+}
+menu.sd :global(button) {
+  width: calc(var(--tbs) * 1vw);
+  height: calc(var(--tbs) * 1vw);
+  padding: 1vw;
 }
 </style>

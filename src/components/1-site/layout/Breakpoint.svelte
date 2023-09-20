@@ -37,7 +37,13 @@
 {:else if $breakpoint === "small-desktop"}
   <div class="vp-layer content-container" inert={$interfaceModal}></div>
   <InterfaceModal />
-  <div class="toolbar-container"></div>
+  <div class="toolbar-container"
+    style:position="absolute"
+    style:top="0"
+    style:right="0"
+  >
+    <Toolbar />
+  </div>
 
 <!-- LARGE DESKTOP ----------------------------------- -->
 {:else if $breakpoint === "large-desktop"}

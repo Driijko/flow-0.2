@@ -2,15 +2,17 @@
 <script>
   // IMPORTS ----------------------------------------------------
   import { modals, interfaceModal } from "../../../dynamic/modals";
-  import { setCurrentInterface } from "../../../dynamic/currentInterface";
+  import { currentInterface, setCurrentInterface } from "../../../dynamic/currentInterface";
   import MenuIcon from "../../6-icons/interface/MenuIcon.svelte";
 
   // EVENT HANDLERS ---------------------------------------------
   function handleClick() {
     if ($interfaceModal === false) {
       modals.open("interfaceModal")
-    }
-    setCurrentInterface("siteMenu");
+    };
+    if ($currentInterface !== "siteMenu") {
+      setCurrentInterface("siteMenu");
+    };
   };
 
 </script>

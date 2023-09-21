@@ -21,7 +21,7 @@
   const { toolbarButtonSizeSD } = layout;
 
   // INTERFACE ELEMENTS IN LIST ---------------------------------------
-  const siteMenuButton = { id: 0, component: SiteMenuModalToggleButton };
+  const siteMenuToggleButton = { id: 0, component: SiteMenuModalToggleButton };
   const instagramLink = { id: 1, component: InstagramLink };
   const shopButton = { id: 2, component: ShopModalOpenerButton };
   const sortButton = { id: 3, component: SortModalOpenerButton };

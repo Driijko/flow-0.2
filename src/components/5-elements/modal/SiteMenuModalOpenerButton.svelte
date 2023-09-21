@@ -7,7 +7,7 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" class="site-menu-modal-opener-button" 
+<button type="button" class="site-menu-modal-opener-button center" 
   on:click={()=> modalOpen("siteMenu")}
   title="open menu"
 >

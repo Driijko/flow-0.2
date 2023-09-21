@@ -40,7 +40,6 @@
       animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
       in:shift="{inTrans}" out:shift="{outTrans}"
       style:width={`${toolbarHeightMO}dvh`}
-      style:padding={`${toolbarHeightMO/5}dvh`}
     >
       <svelte:component this={button.component} />
     </li>
@@ -56,10 +55,6 @@ menu {
 }
 li {
   height: 100%;
-}
-li :global(button) {
-  color: white;
-  width: 100%;
 }
 </style>
 

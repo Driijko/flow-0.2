@@ -79,9 +79,23 @@
 <!-- STYLES //////////////////////////////////////////////// -->
 <style>
 :global(.toolbar button), :global(.toolbar a) {
+  width: 100%;
   height: 100%;
   color: white;
-  padding: 2.5%;
+}
+:global(.toolbar svg) {
+  width: 55%;
+}
+@media (hover: hover) {
+  :global(.toolbar svg) {
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+  }
+  :global(.toolbar button:hover svg), :global(.toolbar button:focus svg),
+  :global(.toolbar a:hover svg), :global(.toolbar a:focus svg) {
+    transform: scale(1.25);
+  }
 }
 /* menu.sd :global(button) {
   width: calc(var(--tbs) * 1vw);

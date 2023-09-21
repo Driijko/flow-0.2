@@ -9,7 +9,7 @@
 
 <!-- MARKUP /////////////////////////////////////////// -->
 <button type="button" on:click={()=> modalOpen("siteMenu", "shop")}
-  title="go to shopping cart"
+  title="go to shopping cart" class="center"
 >
   <ShoppingCartIcon />
 </button>

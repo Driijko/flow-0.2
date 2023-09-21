@@ -64,7 +64,7 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" class="site-menu-modal-button" 
+<button type="button" class="site-menu-modal-button center" 
   on:click={()=>modals.toggle("interfaceModal")}
   class:splash={$currentPage === "splash"}
   class:open={$interfaceModal}

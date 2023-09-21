@@ -1,17 +1,20 @@
 <!-- SCRIPTS ///////////////////////////////////////// -->
 <script>
   // IMPORTS -----------------------------------------------
+  import { flip } from "svelte/animate";
+  import { quintOut, quintIn, sineOut } from "svelte/easing";
+  import shift from "../../../scripts/transitions/shift";
+  import { layout } from "../../../static/siteSettings";
   import SiteMenuModalOpenerButton 
   from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
-  import { layout } from "../../../static/siteSettings";
-  import { flip } from "svelte/animate";
-  import { send, receive } from "../../../scripts/transitions/animShift";
   import SiteMenuModalToggleButton 
   from "../../5-elements/modal/SiteMenuModalToggleButton.svelte";
-  import shift from "../../../scripts/transitions/shift";
-  import { quintOut, quintIn, sineOut } from "svelte/easing";
 
-  const {toolbarHeightMO} = layout;
+  const { toolbarHeightMO } = layout;
+
+  // PROPS -------------------------------------------------
+  export let buttons = [];
+  export let interfaceModalCloser = false;
 
   // TRANSITIONS --------------------------------------
   const inTrans = {
@@ -25,19 +28,14 @@
     x: -window.innerWidth
   }
 
-  // BUTTON ARRAY -------------------------------------
-  let buttons = [
-    { id: 0, component: SiteMenuModalToggleButton},
-    { id: 1, component: SiteMenuModalOpenerButton}
-  ];
-
 </script>
 
 <!-- MARKUP ///////////////////////////////////////////// -->
-<menu class="center fill"
+<menu class="center fill toolbar"
   style:gap={`${toolbarHeightMO * 2}px`}
 >
   {#each buttons as button (button.id)}
+
     <li class="toolbar-button-container"
       animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
       in:shift="{inTrans}" out:shift="{outTrans}"
@@ -46,6 +44,7 @@
     >
       <svelte:component this={button.component} />
     </li>
+
   {/each}
 </menu>
 

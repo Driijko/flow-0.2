@@ -7,7 +7,7 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" class="site-menu-modal-closer-button center" 
+<button type="button" class="interface-modal-closer-button center" 
   on:click={()=>modals.close("interfaceModal")}
   title="close menu"
 >

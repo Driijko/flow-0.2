@@ -5,16 +5,14 @@
   import { quintOut, quintIn, sineOut } from "svelte/easing";
   import shift from "../../../scripts/transitions/shift";
   import { layout } from "../../../static/siteSettings";
-  import SiteMenuModalOpenerButton 
-  from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
-  import SiteMenuModalToggleButton 
-  from "../../5-elements/modal/SiteMenuModalToggleButton.svelte";
+  import { interfaceModal } from "../../../dynamic/modals";
+  import { currentInterface } from "../../../dynamic/currentInterface";
+  
 
   const { toolbarHeightMO } = layout;
 
   // PROPS -------------------------------------------------
   export let buttons = [];
-  export let interfaceModalCloser = false;
 
   // TRANSITIONS --------------------------------------
   const inTrans = {
@@ -36,25 +34,43 @@
 >
   {#each buttons as button (button.id)}
 
-    <li class="toolbar-button-container"
+      <li class="toolbar-button-container"
+        class:interface-closer-container={button.id === 6}
+        class:highlight={button.highlight === $currentInterface && $interfaceModal}
+        animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
+        in:shift="{inTrans}" out:shift="{outTrans}"
+        style:width={`${toolbarHeightMO}dvh`}
+      >
+        <svelte:component this={button.component} />
+      </li>
+
+  {/each}
+  <!-- {#if interfaceModalCloser && $interfaceModal}
+    <li class="interface-modal-closer-button-container"
       animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
       in:shift="{inTrans}" out:shift="{outTrans}"
       style:width={`${toolbarHeightMO}dvh`}
     >
-      <svelte:component this={button.component} />
+      <InterfaceModalCloserButton />
     </li>
-
-  {/each}
+  {/if} -->
 </menu>
+
 
 <!-- STYLES ////////////////////////////////////////////// -->
 <style>
 menu {
-  display: flex;
-  flex-flow: reverse;
+  height: 100%;
+  background-color: black;  
 }
 li {
   height: 100%;
+}
+.interface-closer-container {
+  background-color: hsl(0, 0%, 80%);
+}
+.interface-closer-container :global(button) {
+  color: black;
 }
 </style>
 

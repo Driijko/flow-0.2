@@ -26,15 +26,16 @@
   const shopButton = { id: 2, component: ShopModalOpenerButton };
   const sortButton = { id: 3, component: SortModalOpenerButton };
   const filterButton = { id: 4, component: FilterModalOpenerButton };
+  const siteMenuOpenButton = { id: 5, component: SiteMenuModalOpenerButton };
 
   // INTERFACE MODAL CLOSER ---------------------------
   let interfaceModalCloser = false;
 
   // INTERFACE ARRAY CONFIGURATIONS ---------------------
   const config1 = [instagramLink];
-  const config2 = [instagramLink, siteMenuButton];
-  const config3 = [instagramLink, shopButton, siteMenuButton];
-  const config4 = [sortButton, filterButton, shopButton, siteMenuButton];
+  const config2 = [instagramLink, siteMenuToggleButton];
+  const config3 = [instagramLink, shopButton, siteMenuOpenButton];
+  const config4 = [sortButton, filterButton, shopButton, siteMenuOpenButton];
 
   // INTERFACE ARRAY -------------------------------------
   let buttons = [];

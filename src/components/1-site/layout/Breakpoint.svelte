@@ -24,7 +24,7 @@
     <div class="content-container" inert={$interfaceModal}
       style:height={`${100 - toolbarHeightMO}%`}
     ></div>
-    <div class="toolbar-container" inert={$interfaceModal}
+    <div class="toolbar-container"
       style:height={`${toolbarHeightMO}%`}
     >
       <Toolbar />

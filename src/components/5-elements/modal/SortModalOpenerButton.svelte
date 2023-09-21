@@ -8,6 +8,6 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" on:click={()=> modalOpen("sort")}>
+<button type="button" on:click={()=> modalOpen("sort")} title="sort products">
   <SortIcon />
 </button>

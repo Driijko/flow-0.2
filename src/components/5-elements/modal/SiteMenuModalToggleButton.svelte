@@ -69,6 +69,7 @@
   class:splash={$currentPage === "splash"}
   class:open={$interfaceModal}
   class:closed={!($interfaceModal)}
+  title={$interfaceModal ? "close menu" : "open menu"}
 >
   <svg viewBox="0 0 100 100">
     <line class="line1" />

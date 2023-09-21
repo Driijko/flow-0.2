@@ -8,6 +8,6 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" on:click={()=> modalOpen("filter")}>
+<button type="button" on:click={()=> modalOpen("filter")} title="filter products">
   <FilterIcon />
 </button>

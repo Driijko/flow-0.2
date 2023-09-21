@@ -8,6 +8,8 @@
 </script>
 
 <!-- MARKUP /////////////////////////////////////////// -->
-<button type="button" on:click={()=> modalOpen("siteMenu", "shop")}>
+<button type="button" on:click={()=> modalOpen("siteMenu", "shop")}
+  title="go to shopping cart"
+>
   <ShoppingCartIcon />
 </button>

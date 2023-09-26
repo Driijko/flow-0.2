@@ -4,8 +4,9 @@
   import { onMount } from "svelte";
   import { layout } from "../../../static/siteSettings";
   import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
-  import { interfaceModal } from "../../../dynamic/modals";
+  import { interfaceModal, modals } from "../../../dynamic/modals";
   import InterfaceAreaButton from "./InterfaceAreaButton.svelte";
+  import Toolbar from "../toolbar/Toolbar.svelte";
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;
 
@@ -19,6 +20,12 @@
   // Observe Element ----
   onMount(()=> {
     resizeObserver.observe(interfaceAreaElement);
+
+    // If viewport is resized to small-desktop or mobile, we
+    // close the interface modal.
+    return ()=> {
+      modals.close("interfaceModal");
+    };
   });
 
 </script>
@@ -37,7 +44,9 @@
     <div class="toolbar-container"
       style:width="var(--iw)"
       style:height={`calc(var(--ih) * ${toolbarHeightLD})`}
-    ></div>
+    >
+      <Toolbar />
+    </div>
   </div>
 
   <!-- CONTENT AREA ----------------------------------------- -->
@@ -66,6 +75,7 @@
   flex-direction: column;
   background-color: pink;
   transition: width 0.5s ease-out;
+  overflow: hidden;
 }
 .content-area {
   background-color: orange;

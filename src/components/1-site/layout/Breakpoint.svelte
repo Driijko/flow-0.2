@@ -56,7 +56,4 @@
 .content-container {
   background-color: hsla(0, 100%, 50%, 1);
 }
-.toolbar-container {
-  background-color: black;
-}
 </style>

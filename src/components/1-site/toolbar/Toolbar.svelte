@@ -21,7 +21,7 @@
   from "../../5-elements/modal/InterfaceModalCloserButton.svelte";
 
 
-  // INTERFACE ELEMENTS IN LIST ---------------------------------------
+  // INTERFACE ELEMENTS ---------------------------------------
   const siteMenuToggleButton = { id: 0, component: SiteMenuModalToggleButton };
   const instagramLink = { id: 1, component: InstagramLink };
   const shopButton = { id: 2, component: ShopModalOpenerButton };
@@ -40,10 +40,11 @@
     component: SiteMenuModalOpenerButton,
     highlight: "siteMenu"
   };
-  const interfaceCloser = { id: 6, component: InterfaceModalCloserButton };
-
-  // INTERFACE MODAL CLOSER ---------------------------
-  let interfaceModalCloser = false;
+  const interfaceCloser = { 
+    id: 6, 
+    component: InterfaceModalCloserButton,
+    closer: true 
+  };
 
   // INTERFACE ARRAY CONFIGURATIONS ---------------------
   const config1 = [instagramLink];
@@ -60,11 +61,7 @@
   // RESPONSIVE ARRAY CONFIGURATION ----------------------
   $: if ($breakpoint === "large-desktop") {
     if ($currentPage === "shop") {
-      if ($interfaceModal) {
-        buttons = config5;
-      } else {
-        buttons = config4;
-      };
+      buttons = config4;
     } else {
       buttons = config1;
     }
@@ -87,8 +84,10 @@
 </script>
 
 <!-- MARKUP ///////////////////////////////////////////////// -->
-{#if $breakpoint === "mobile"}
+{#if $breakpoint !== "small-desktop"}
   <ToolbarMO {buttons} />
+<!-- {:else if $breakpoint === "small-desktop"} -->
+
 {/if}
 <!-- <menu class="fill center"
   class:sd={$breakpoint === "small-desktop"}
@@ -106,10 +105,10 @@
   color: white;
 }
 :global(.toolbar .highlight) {
-  background-color: hsl(300, 100%, 50%);
+  background-color: hsl(0, 0%, 30%);
 }
 :global(.toolbar svg) {
-  height: 60%;
+  height: 55%;
 }
 @media (hover: hover) {
   :global(.toolbar svg) {
@@ -117,8 +116,10 @@
     transition-timing-function: ease-out;
     transition-duration: 0.3s;
   }
-  :global(.toolbar button:hover svg), :global(.toolbar button:focus svg),
-  :global(.toolbar a:hover svg), :global(.toolbar a:focus svg) {
+  :global(.toolbar li:not(.highlight) button:hover svg), 
+  :global(.toolbar li:not(.highlight) button:focus-visible svg),
+  :global(.toolbar li:not(.highlight) a:hover svg), 
+  :global(.toolbar li:not(.highlight) a:focus-visible svg) {
     transform: scale(1.25);
   }
 }

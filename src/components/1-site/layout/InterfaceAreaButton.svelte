@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { interfaceModal, modals } from "../../../dynamic/modals";
   import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
+  import { breakpoint } from "../../../dynamic/breakpoint";
 
   // ANIMATION -------------------------------------
   let animation;
@@ -38,12 +39,17 @@
 </script>
 
 <!-- MARKUP ///////////////////////////////////////// -->
-<button class="interface-area-button" type="button"
-  class:open={$interfaceModal}
-  on:click={()=> modals.toggle("interfaceModal")}
->
-  <RightArrow />
-</button>
+{#if $breakpoint === "large-desktop"}
+  <button class="interface-area-button" type="button"
+    class:open={$interfaceModal}
+    on:click={()=> modals.toggle("interfaceModal")}
+  >
+    <RightArrow />
+    <p>
+      {$breakpoint}
+    </p>
+  </button>
+{/if}
 
 <!-- STYLES //////////////////////////////////////// -->
 <style>

@@ -8,7 +8,6 @@
   import { interfaceModal } from "../../../dynamic/modals";
   import { currentInterface } from "../../../dynamic/currentInterface";
   
-
   const { toolbarHeightMO } = layout;
 
   // PROPS -------------------------------------------------
@@ -35,7 +34,7 @@
   {#each buttons as button (button.id)}
 
       <li class="toolbar-button-container"
-        class:interface-closer-container={button.id === 6}
+        class:interface-closer-container={button.closer}
         class:highlight={button.highlight === $currentInterface && $interfaceModal}
         animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
         in:shift="{inTrans}" out:shift="{outTrans}"
@@ -45,15 +44,6 @@
       </li>
 
   {/each}
-  <!-- {#if interfaceModalCloser && $interfaceModal}
-    <li class="interface-modal-closer-button-container"
-      animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
-      in:shift="{inTrans}" out:shift="{outTrans}"
-      style:width={`${toolbarHeightMO}dvh`}
-    >
-      <InterfaceModalCloserButton />
-    </li>
-  {/if} -->
 </menu>
 
 

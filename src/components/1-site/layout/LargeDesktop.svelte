@@ -10,6 +10,9 @@
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;
 
+  // OPEN INTERFACE AREA BY DEFAULT ---------------------------
+  modals.open("interfaceModal");
+
   // AREA RESIZING ----------------------------------------------
   // Element Reference -----
   let interfaceAreaElement;
@@ -21,10 +24,9 @@
   onMount(()=> {
     resizeObserver.observe(interfaceAreaElement);
 
-    // If viewport is resized to small-desktop or mobile, we
-    // close the interface modal.
+    // Unobserve on dismount -----
     return ()=> {
-      modals.close("interfaceModal");
+      resizeObserver.unobserve(interfaceAreaElement);
     };
   });
 

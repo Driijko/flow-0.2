@@ -1,10 +1,10 @@
 <!-- SCRIPTS ///////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------
-  import shift from "../../../../scripts/transitions/shift";
+  import shift from "../../../../../scripts/transitions/shift";
   import { linear } from "svelte/easing";
   import { siteMenuGetTabPosition, siteMenuCurrentTab, siteMenuPrevTab } 
-  from "../../../../dynamic/siteMenuTabs";
+  from "../../../../../dynamic/siteMenuTabs";
 
   // REACTIVE -----------------------------------
   $: currentTabPosition = siteMenuGetTabPosition($siteMenuCurrentTab);

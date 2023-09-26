@@ -1,9 +1,9 @@
 <!-- SCRIPTS /////////////////////////////////////////// -->
 <script>
   // IMPORTS -------------------------------------------
-  import { siteMenuCurrentTab } from "../../../../dynamic/siteMenuTabs";
+  import { siteMenuCurrentTab } from "../../../../../dynamic/siteMenuTabs";
   import SiteMenuTabTransition from "./SiteMenuTabTransition.svelte";
-  import Navigation from "./tabs/Navigation.svelte";
+  import Navigation from "../tabs/Navigation.svelte";
   
 </script>
 

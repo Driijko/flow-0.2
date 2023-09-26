@@ -13,7 +13,7 @@
 
 <!-- MARKUP ///////////////////////////////////////////////////// -->
 {#if $interfaceModal}
-  <dialog open class="center" class:vp-layer={$breakpoint === "small-desktop"}
+  <dialog open class:vp-layer={$breakpoint === "small-desktop"}
     class:mobile={$breakpoint === "mobile"}
     style:--thm={toolbarHeightMO}
     transition:shift="{{y:window.innerHeight, duration:1000}}"

@@ -36,12 +36,13 @@
     }
   };
 
+  // This code fixes a bug caused by rapid viewport resizing.
   let noDisplay = false;
   $: if ($breakpoint === "large-desktop") {
     noDisplay = false;
   } else {
     noDisplay = true;
-  }
+  };
 
 </script>
 

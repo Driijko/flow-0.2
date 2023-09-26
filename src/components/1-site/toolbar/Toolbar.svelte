@@ -9,7 +9,8 @@
   from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
   import SiteMenuModalToggleButton 
   from "../../5-elements/modal/SiteMenuModalToggleButton.svelte";
-  import ToolbarMO from "./ToolbarMO.svelte";
+  import ToolbarMOLD from "./ToolbarMOLD.svelte";
+  import ToolbarSD from "./ToolbarSD.svelte";
   import InstagramLink from "../../5-elements/links/InstagramLink.svelte";
   import ShopModalOpenerButton 
   from "../../5-elements/modal/ShopModalOpenerButton.svelte";
@@ -85,9 +86,9 @@
 
 <!-- MARKUP ///////////////////////////////////////////////// -->
 {#if $breakpoint !== "small-desktop"}
-  <ToolbarMO {buttons} />
-<!-- {:else if $breakpoint === "small-desktop"} -->
-
+  <ToolbarMOLD {buttons} />
+{:else if $breakpoint === "small-desktop"}
+  <ToolbarSD {buttons} />
 {/if}
 <!-- <menu class="fill center"
   class:sd={$breakpoint === "small-desktop"}

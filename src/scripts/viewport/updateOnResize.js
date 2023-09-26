@@ -1,4 +1,3 @@
-import { resizeDelay } from "../../static/siteSettings";
 import { updateBreakpoint } from "../../dynamic/breakpoint";
 import { viewportCSS } from "./viewportCSS";
 

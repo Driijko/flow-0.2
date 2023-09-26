@@ -36,20 +36,24 @@
     }
   };
 
+  let noDisplay = false;
+  $: if ($breakpoint === "large-desktop") {
+    noDisplay = false;
+  } else {
+    noDisplay = true;
+  }
+
 </script>
 
 <!-- MARKUP ///////////////////////////////////////// -->
-{#if $breakpoint === "large-desktop"}
-  <button class="interface-area-button" type="button"
-    class:open={$interfaceModal}
-    on:click={()=> modals.toggle("interfaceModal")}
-  >
-    <RightArrow />
-    <p>
-      {$breakpoint}
-    </p>
-  </button>
-{/if}
+<button class="interface-area-button" type="button"
+  class:open={$interfaceModal}
+  class:no-display={noDisplay}
+  on:click={()=> modals.toggle("interfaceModal")}
+>
+  <RightArrow />
+</button>
+
 
 <!-- STYLES //////////////////////////////////////// -->
 <style>
@@ -65,6 +69,9 @@
   transition-property: background-color, color;
   transition-duration: 1s;
   transition-timing-function: ease-in;
+}
+.interface-area-button.no-display {
+  display: none;
 }
 .interface-area-button.open {
   background-color: transparent;

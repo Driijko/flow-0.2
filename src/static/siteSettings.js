@@ -15,5 +15,3 @@ export const layout = {
 };
 
 export const startingPageName = "shop";
-
-export const resizeDelay = 2000;

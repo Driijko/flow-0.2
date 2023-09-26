@@ -1,9 +1,9 @@
 <!-- SCRIPTS ///////////////////////////////// -->
 <script>
   // IMPORTS -------------------------------------------
-  import { breakpoint } from "../../../../dynamic/breakpoint";
-  import PageLink from "../../../5-elements/links/PageLink.svelte";
-  import { currentPage } from "../../../../dynamic/currentPage";
+  import { breakpoint } from "../../../../../dynamic/breakpoint";
+  import PageLink from "../../../../5-elements/links/PageLink.svelte";
+  import { currentPage } from "../../../../../dynamic/currentPage";
 
 </script>
 

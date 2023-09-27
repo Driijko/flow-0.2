@@ -1,7 +1,7 @@
 import { writable, get } from "svelte/store";
 
 // STATE ---------------------------------
-export const interfaceModal = writable(false);
+export const interfaceModal = writable(true);
 
 // MAP ------------------------------------
 const map = {

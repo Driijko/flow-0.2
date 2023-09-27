@@ -8,7 +8,7 @@
   // ELEMENT REFERENCE -----------------------------------
   let audioBkgElement;
 
-  // STATE ------------------------------------------
+  // LOCAL STATE ------------------------------------------
   let playlistMode = false;
   let ended = false;
 
@@ -55,6 +55,7 @@
 
 </script>
 
+<!-- MARKUP //////////////////////////////////////////////// -->
 <audio bind:this={audioBkgElement} src={$audioBkgTrack.path} 
   bind:paused={$audioBkgPaused} loop={$audioBkgLoop} 
   bind:currentTime={$audioBkgCurrentTime}

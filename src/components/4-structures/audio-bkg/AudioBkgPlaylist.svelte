@@ -12,11 +12,11 @@
   // PROPS -----------------------------------------
   export let identifier = "";
 
-  // SETTINGS ---------------------------------------------
-  const fadeDuration = 1500;
-
-  // DATA ------------------------------------------------
+  // DESTRUCTURING -----------------------------
   const {tracks, name} = playlists[identifier];
+
+  // LOCAL DATA ---------------------------------------------
+  const fadeDuration = 1500;
 
   // EVENT HANDLERS ------------------------------------
   function handleClick(track, index) {
@@ -36,7 +36,7 @@
     };
   };
 
-  // REACT ON INITIALIZE ----------------------------------------
+  // REACT ON INITIALIZATION ----------------------------------------
   if ($audioBkgTrack.path === "") {
     audioBkgLoad(tracks[0].name, tracks[0].path);
     audioBkgNewPlaylist(identifier, tracks);

@@ -24,9 +24,6 @@
 
 <!-- STYLES ////////////////////////////////////////////////////// -->
 <style>
-dialog {
-  border: 4px solid yellow;
-}
 dialog.mobile {
   height: calc((100 - var(--thm)) * 1%);
   width: 100%;

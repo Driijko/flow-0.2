@@ -1,7 +1,9 @@
 <!-- SCRIPTS //////////////////////////////////////////////// -->
 <script>
   // IMPORTS ---------------------------------------
-  import { siteMenuCurrentTab, siteMenuNewTab } from "../../../../../dynamic/siteMenuTabs";
+  import { siteMenuCurrentTab, siteMenuNewTab } 
+  from "../../../../../dynamic/siteMenuTabs";
+  
   // PROPS -------------------------------------------
   export let tabName = "";
 

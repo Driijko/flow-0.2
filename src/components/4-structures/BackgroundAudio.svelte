@@ -10,7 +10,7 @@
 </script>
 
 <!-- MARKUP ///////////////////////////////////////////// -->
-<div class="site-settings">
+<div class="background-audio">
   <label for="audio-option">
     Background Audio
     <AudioBkgCheckbox />

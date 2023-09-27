@@ -1,7 +1,7 @@
 <!-- SCRIPTS /////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------
-  import SiteSettings from "../4-structures/SiteSettings.svelte";
+  import SiteSettings from "../4-structures/BackgroundAudio.svelte";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
   import { setPageExit, newPage } from "../../dynamic/currentPage";
@@ -126,13 +126,13 @@ path {
 p {
   line-height: 1.5;
 }
-#page1 :global(.site-settings) {
+#page1 :global(.background-audio) {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 0 8px;
 }
-#page1 :global(.site-settings label:nth-of-type(1)) {
+#page1 :global(.background-audio label:nth-of-type(1)) {
   display: flex;
   align-items: center;
   gap: 30px;

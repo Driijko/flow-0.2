@@ -3,7 +3,7 @@
   // IMPORTS ---------------------------------------
   import { siteMenuCurrentTab, siteMenuNewTab } 
   from "../../../../../dynamic/siteMenuTabs";
-  
+
   // PROPS -------------------------------------------
   export let tabName = "";
 
@@ -12,7 +12,7 @@
 <!-- MARKUP /////////////////////////////////////////////// -->
 <button type="button" class="center" inert={$siteMenuCurrentTab === tabName}
   class:highlight={$siteMenuCurrentTab === tabName}
-  on:click={()=> siteMenuNewTab("tabName")}
+  on:click={()=> siteMenuNewTab(tabName)}
 >
   <slot />
 </button>

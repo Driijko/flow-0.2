@@ -11,7 +11,7 @@
 <ul class:small-desktop={$breakpoint === "small-desktop"}
   class:portrait={$breakpoint !== "small-desktop"}
 >
-  <div class="background"></div>
+  <div class="background fill"></div>
   <li class:current={$currentPage === "introduction"}>
     <PageLink pageName="introduction">Introduction</PageLink>
   </li>
@@ -28,6 +28,7 @@
 
 <!-- STYLES //////////////////////////////////// -->
 <style>
+/* GENERAL ------------------------------------------ */
 ul {
   position: relative;
   height: 100%;
@@ -37,8 +38,6 @@ ul {
 }
 .background {
   position: absolute;
-  width: 100%;
-  height: 100%;
   /* background-image: url("./images/pic5.jpg"); */
   background-size: cover;
   background-position: 50% 50%;
@@ -46,16 +45,30 @@ ul {
   z-index: 1;
   opacity: 0.5;
 }
+li {
+  z-index: 2;
+}
+li :global(a) {
+  color: white;
+}
+li.current :global(a) {
+  transform: scale(1.5);
+  text-decoration: underline;
+}
+
+/* PORTRAIT ----------------------------------------------- */
 ul.portrait {
   align-items: center;
   gap: calc(var(--iw)/5);
 }
+ul.portrait :global(a) {
+  font-size: calc(var(--iw)/13);
+}
+
+/* SMALL DESKTOP ------------------------------------------ */
 ul.small-desktop {
   padding-left: calc(var(--iw)/100);
   gap: calc(var(--iw)/15);
-}
-ul.portrait :global(a) {
-  font-size: calc(var(--iw)/13);
 }
 ul.small-desktop li {
   width: fit-content;
@@ -63,13 +76,7 @@ ul.small-desktop li {
 ul.small-desktop :global(a) {
   font-size: calc(var(--iw)/50);
 }
-li {
-  z-index: 2;
-}
-li.current :global(a) {
-  transform: scale(1.5);
-  text-decoration: underline;
-}
+
 /* TRANSITIONS //////////////////////////////////////// */
 @media (hover:hover) {
   ul.small-desktop :global(a) {

@@ -7,6 +7,7 @@
   import { interfaceModal, modals } from "../../../dynamic/modals";
   import InterfaceAreaButton from "./InterfaceAreaButton.svelte";
   import Toolbar from "../toolbar/Toolbar.svelte";
+  import Interface from "../interface/Interface.svelte";
 
   const { interfaceAreaWidth, toolbarHeightLD } = layout;
 
@@ -42,7 +43,9 @@
     style:width={$interfaceModal ? `${interfaceAreaWidth}%` : "0%"}
     style:flex-shrink="0"
   >
-    <div class="interface-container iuarr"></div>
+    <div class="interface-container iuarr">
+      <Interface />
+    </div>
     <div class="toolbar-container"
       style:width="var(--iw)"
       style:height={`calc(var(--ih) * ${toolbarHeightLD})`}

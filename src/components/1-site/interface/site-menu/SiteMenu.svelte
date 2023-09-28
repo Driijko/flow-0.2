@@ -43,6 +43,9 @@ div :global(.site-menu-breadcrumbs) {
   display: flex;
   align-items: center;
 }
+div :global(.site-menu-tab-container) {
+  overflow: hidden;
+}
 div :global(.site-menu-tab) {
   background-color: black;
   border-color: grey;

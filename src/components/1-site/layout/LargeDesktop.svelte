@@ -1,9 +1,7 @@
 <!-- SCRIPTS //////////////////////////////////////////// -->
 <script>
   // IMPORTS --------------------------------------------------
-  import { onMount } from "svelte";
   import { layout } from "../../../static/siteSettings";
-  import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
   import { interfaceModal, modals } from "../../../dynamic/modals";
   import InterfaceAreaButton from "./InterfaceAreaButton.svelte";
   import Toolbar from "../toolbar/Toolbar.svelte";
@@ -14,23 +12,6 @@
   // OPEN INTERFACE AREA BY DEFAULT ---------------------------
   modals.open("interfaceModal");
 
-  // AREA RESIZING ----------------------------------------------
-  // Element Reference -----
-  let interfaceAreaElement;
-
-  // Resize Callback  ----
-  const resizeObserver = new ResizeObserver(viewportCSSLD);
-
-  // Observe Element ----
-  onMount(()=> {
-    resizeObserver.observe(interfaceAreaElement);
-
-    // Unobserve on dismount -----
-    return ()=> {
-      resizeObserver.unobserve(interfaceAreaElement);
-    };
-  });
-
 </script>
 
 <!-- MARKUP /////////////////////////////////////////////// -->
@@ -39,7 +20,7 @@
 >
   <!-- INTERFACE AREA ------------------------------------- -->
   <InterfaceAreaButton />
-  <div class="interface-area center" bind:this={interfaceAreaElement}
+  <div class="interface-area center"
     style:width={$interfaceModal ? `${interfaceAreaWidth}%` : "0%"}
     style:flex-shrink="0"
   >

@@ -45,6 +45,7 @@ export function viewportCSS() {
 
   // MOBILE MODE ----------------------------------
   if (window.innerWidth <= window.innerHeight) {
+    console.log(window.innerWidth);
 
     // UARRs -----
     const portraitUARRContent = calcUARR(
@@ -98,6 +99,4 @@ export function viewportCSS() {
   else {
     viewportCSSLD();
   }
-
-  
 };

@@ -4,8 +4,15 @@
   import { gsap } from "gsap";
   import { onMount } from "svelte";
   import { interfaceModal, modals } from "../../../dynamic/modals";
+  import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
   import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
   import { breakpoint } from "../../../dynamic/breakpoint";
+
+  // EVENT HANDLERS -----------------------------------
+  function handleClick() {
+    modals.toggle("interfaceModal");
+    viewportCSSLD();
+  }
 
   // ANIMATION -------------------------------------
   let animation;
@@ -50,11 +57,10 @@
 <button class="interface-area-button" type="button"
   class:open={$interfaceModal}
   class:no-display={noDisplay}
-  on:click={()=> modals.toggle("interfaceModal")}
+  on:click={handleClick}
 >
   <RightArrow />
 </button>
-
 
 <!-- STYLES //////////////////////////////////////// -->
 <style>

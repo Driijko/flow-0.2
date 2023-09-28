@@ -64,6 +64,9 @@ div :global(.site-menu-tab-buttons button) {
   border-radius: 0 0 50% 50%;
   background-color: grey;
 }
+div :global(.site-menu-tab-buttons li .gap) {
+  width: 5%;
+}
 div :global(.site-menu-tab-buttons button.highlight) {
   background-color: red;
 }
@@ -150,7 +153,7 @@ div :global(.site-menu-tab-buttons button.highlight) {
   padding-bottom: 1%;
 }
 .site-menu.landscape :global(.site-menu-tab-buttons button svg) {
-  width: 23%;
+  height: 60%;
 }
 .site-menu.landscape :global(.shop-tab-button) {
   font-size: calc(var(--iw)/50);

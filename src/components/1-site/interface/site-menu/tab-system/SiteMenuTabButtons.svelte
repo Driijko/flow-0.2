@@ -21,7 +21,9 @@
   </li>
   <li>
     <SiteMenuTabButton tabName="shopping-cart">
-      <ShoppingCartIcon /><output>({$shoppingList.length})</output>
+      <ShoppingCartIcon />
+      <span class="gap"></span>
+      <output>({$shoppingList.length})</output>
     </SiteMenuTabButton>
   </li>
   <li>

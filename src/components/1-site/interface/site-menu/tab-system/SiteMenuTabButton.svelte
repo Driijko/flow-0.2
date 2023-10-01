@@ -13,6 +13,7 @@
 <button type="button" class="center" inert={$siteMenuCurrentTab === tabName}
   class:highlight={$siteMenuCurrentTab === tabName}
   on:click={()=> siteMenuNewTab(tabName)}
+  title={tabName}
 >
   <slot />
 </button>

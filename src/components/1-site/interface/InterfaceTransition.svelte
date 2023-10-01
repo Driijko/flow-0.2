@@ -2,6 +2,8 @@
 <script>
   // IMPORTS ----------------------------------
   import shift from "../../../scripts/transitions/shift";
+  import { fly } from "svelte/transition";
+  import { crossfade } from "svelte/transition";
   import { linear } from "svelte/easing";
   import { breakpoint } from "../../../dynamic/breakpoint";
   import { layout } from "../../../static/siteSettings";
@@ -20,18 +22,25 @@
 </script>
 
 <!-- MARKUP ///////////////////////////////////-->
-<div class="site-menu-tab fill"
-  in:shift="{{
-    y: distance, 
-    duration: 300, 
-    delay: 300,
+<div class="interface-transition fill"
+  in:fly="{{
+    y: -distance, 
+    duration: 500, 
+    delay: 500,
     easing: linear,
   }}"
   out:shift="{{
     y: distance, 
-    duration: 300,
+    duration: 500,
     easing: linear,
   }}"
 >
   <slot />
 </div>
+
+<!-- STYLES //////////////////////////////// -->
+<style>
+div {
+  background-color: white;
+}
+</style>

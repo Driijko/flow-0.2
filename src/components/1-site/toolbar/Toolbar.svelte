@@ -90,13 +90,7 @@
 {:else if $breakpoint === "small-desktop"}
   <ToolbarSD {buttons} />
 {/if}
-<!-- <menu class="fill center"
-  class:sd={$breakpoint === "small-desktop"}
-  style:--tbs={toolbarButtonSizeSD}
->
-  <SiteMenuModalOpenerButton />
-  <SiteMenuModalToggleButton />
-</menu> -->
+
 
 <!-- STYLES //////////////////////////////////////////////// -->
 <style>
@@ -107,9 +101,11 @@
 }
 :global(.toolbar .highlight) {
   background-color: hsl(0, 0%, 30%);
+  color: black;
 }
 :global(.toolbar svg) {
   height: 55%;
+  width: 50%;
 }
 @media (hover: hover) {
   :global(.toolbar svg) {
@@ -124,9 +120,4 @@
     transform: scale(1.25);
   }
 }
-/* menu.sd :global(button) {
-  width: calc(var(--tbs) * 1vw);
-  height: calc(var(--tbs) * 1vw);
-  padding: 1vw;
-} */
 </style>

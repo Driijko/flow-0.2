@@ -13,11 +13,11 @@
   const { interfaceAreaWidth, portraitAR } = layout;
 
   let distance = window.innerHeight;
-  $: if ($breakpoint === "large-desktop") {
-    distance = interfaceAreaWidth * (portraitAR.height / portraitAR.width);
-  } else {
-    distance = window.innerHeight;
-  }
+  // $: if ($breakpoint === "large-desktop") {
+  //   distance = interfaceAreaWidth;
+  // } else {
+  //   distance = window.innerHeight;
+  // }
 
 </script>
 

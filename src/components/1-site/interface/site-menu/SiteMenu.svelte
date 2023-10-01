@@ -111,21 +111,17 @@ div :global(.site-menu-tab-buttons button.highlight) {
 }
 .site-menu.portrait :global(.site-menu-tab-buttons button) {
   height: 70%;
-  max-height: 60px;
   padding-bottom: 5%;
 }
 .site-menu.portrait :global(.site-menu-tab-buttons button svg) {
   width: 35%;
-  max-width: 60px;
   height: 80%;
-  max-height: 60px;
 }
 
 /* SMALL DESKTOP / LANDSCAPE ------------------------------------------ */
 .site-menu.landscape header {
   align-items: center;
   gap: calc(var(--iw)/50);
-  /* height: calc(var(--ih) * 0.107); */
   height: 10%;
 }
 .site-menu.landscape h1 {

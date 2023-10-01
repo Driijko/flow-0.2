@@ -67,7 +67,7 @@
 .interface-area-button {
   position: fixed;
   top: 0;
-  width: 40px;
+  width: 1.5vw;
   height: 100dvh;
   background-color: hsla(0, 100%, 0%, 0.8);
   color: white;

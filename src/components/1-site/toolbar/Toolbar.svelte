@@ -48,11 +48,12 @@
   };
 
   // INTERFACE ARRAY CONFIGURATIONS ---------------------
-  const config1 = [instagramLink];
-  const config2 = [instagramLink, siteMenuToggleButton];
-  const config3 = [instagramLink, shopButton, siteMenuOpenButton];
-  const config4 = [sortButton, filterButton, shopButton, siteMenuOpenButton];
-  const config5 = [
+  const config1 = [ interfaceCloser ];
+  const config2 = [instagramLink];
+  const config3 = [instagramLink, siteMenuToggleButton];
+  const config4 = [instagramLink, shopButton, siteMenuOpenButton];
+  const config5 = [sortButton, filterButton, shopButton, siteMenuOpenButton];
+  const config6 = [
     sortButton, filterButton, shopButton, siteMenuOpenButton, interfaceCloser
   ];
 
@@ -62,22 +63,24 @@
   // RESPONSIVE ARRAY CONFIGURATION ----------------------
   $: if ($breakpoint === "large-desktop") {
     if ($currentPage === "shop") {
-      buttons = config4;
+      buttons = config5;
     } else {
-      buttons = config1;
+      buttons = config2;
     }
+  } else if ($currentPage === "splash") {
+    buttons = config1;
   } else {
     if ($currentPage === "shop") {
       if ($interfaceModal) {
-        buttons = config5;
+        buttons = config6;
       } else {
-        buttons = config4;
+        buttons = config5;
       };
     } else {
       if ($shoppingList.length > 0) {
-        buttons = config3;
+        buttons = config4;
       } else {
-        buttons = config2;
+        buttons = config3;
       }
     };
   };
@@ -88,7 +91,7 @@
 {#if $breakpoint !== "small-desktop"}
   <ToolbarMOLD {buttons} />
 {:else if $breakpoint === "small-desktop"}
-  <ToolbarSD {buttons} />
+  <ToolbarSD {buttons}  />
 {/if}
 
 

@@ -7,6 +7,8 @@
   import Toolbar from "../toolbar/Toolbar.svelte";
   import InterfaceModal from "../interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
+  import { currentPage } from "../../../dynamic/currentPage";
+  import SiteMenuModalOpenerButton from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
 
   // DESTRUCTURING ----------------------------------
   const { toolbarHeightMO } = layout;
@@ -26,10 +28,17 @@
 {#if localBreakpoint === "mobile"}
   <div class="vp-layer">
     <div class="content-container" inert={$interfaceModal}
-      style:height={`${100 - toolbarHeightMO}%`}
-    ></div>
+      style:height={
+        $currentPage === "splash" && !($interfaceModal) ? 
+        "100dvh" : `${100 - toolbarHeightMO}%`
+      }
+    >
+      <SiteMenuModalOpenerButton />
+    </div>
     <div class="toolbar-container"
-      style:height={`${toolbarHeightMO}%`}
+      style:height={
+      $currentPage === "splash" && !($interfaceModal) ? 
+      "0" : `${toolbarHeightMO}%`}
     >
       <Toolbar />
     </div>

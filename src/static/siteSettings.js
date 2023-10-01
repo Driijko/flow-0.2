@@ -14,4 +14,4 @@ export const layout = {
   contentAreaPadding: 0.85, //  reverse percentage of content area (0.85 = 15%)
 };
 
-export const startingPageName = "shop";
+export const startingPageName = "splash";

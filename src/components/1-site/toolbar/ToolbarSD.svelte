@@ -44,22 +44,21 @@
 <menu class="toolbar" style:gap={`${toolbarButtonSizeSD/4}vw`}>
 
   {#each buttons as button (button.id)}
+
     <li class="toolbar-button-container center"
       class:interface-closer-container={button.closer}
       class:highlight={button.highlight === $currentInterface && $interfaceModal}
       animate:flip="{{duration: 700, delay: 300, easing: sineOut}}"
       in:shift="{button.closer ? inTransCloser : inTransReg}" 
       out:shift="{button.closer ? outTransCloser : outTransReg}"
-      style:width={
-        `${toolbarButtonSizeSD * (button.closer ? closerButtonRatio : 1)}vw`
-      }
-      style:height={
-        `${toolbarButtonSizeSD * (button.closer ? closerButtonRatio : 1)}vw`
-      }
+      style:width={button.closer? "10vh" : `${toolbarButtonSizeSD}vw`}
+      style:height={button.closer? "10vh" : `${toolbarButtonSizeSD}vw`}
     >
       <svelte:component this={button.component} />
     </li>
+
   {/each}
+
 </menu>
 
 <!-- STYLES /////////////////////////////////////////////////// -->

@@ -5,26 +5,29 @@
   import SiteMenuBreadcrumbs from "./SiteMenuBreadcrumbs.svelte";
   import SiteMenuTabs from "./tab-system/SiteMenuTabs.svelte";
   import SiteMenuTabButtons from "./tab-system/SiteMenuTabButtons.svelte";
+  import InterfaceTransition from "../InterfaceTransition.svelte";
 
 </script>
 
 <!-- MARKUP //////////////////////////////////////////////////////////// -->
-<div class="site-menu fill"
-  class:portrait={$breakpoint !== "small-desktop"}
-  class:landscape={$breakpoint === "small-desktop"}
->
-  <header>
-    <h1>FLOW</h1>
-    <h2>A front-end web developer framework</h2>
-  </header>
+<InterfaceTransition>
+  <div class="site-menu fill"
+    class:portrait={$breakpoint !== "small-desktop"}
+    class:landscape={$breakpoint === "small-desktop"}
+  >
+    <header>
+      <h1>FLOW</h1>
+      <h2>A front-end web developer framework</h2>
+    </header>
 
-  <SiteMenuBreadcrumbs />
+    <SiteMenuBreadcrumbs />
 
-  <SiteMenuTabs />
+    <SiteMenuTabs />
 
-  <SiteMenuTabButtons />
+    <SiteMenuTabButtons />
 
-</div>
+  </div>
+</InterfaceTransition>
 
 <!-- STYLES //////////////////////////////////////////// -->
 <style>
@@ -122,7 +125,8 @@ div :global(.site-menu-tab-buttons button.highlight) {
 .site-menu.landscape header {
   align-items: center;
   gap: calc(var(--iw)/50);
-  height: calc(var(--ih) * 0.107);
+  /* height: calc(var(--ih) * 0.107); */
+  height: 10%;
 }
 .site-menu.landscape h1 {
   font-size: calc(var(--iw)/30);

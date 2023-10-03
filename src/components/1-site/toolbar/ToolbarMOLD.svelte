@@ -7,7 +7,6 @@
   import { layout } from "../../../static/siteSettings";
   import { interfaceModal } from "../../../dynamic/modals";
   import { currentInterface } from "../../../dynamic/currentInterface";
-  import { currentPage } from "../../../dynamic/currentPage";
   
   const { toolbarHeightMO } = layout;
 

@@ -48,6 +48,7 @@
   };
 
   // INTERFACE ARRAY CONFIGURATIONS ---------------------
+  const config0 = [];
   const config1 = [ interfaceCloser ];
   const config2 = [instagramLink];
   const config3 = [instagramLink, siteMenuToggleButton];
@@ -68,7 +69,11 @@
       buttons = config2;
     }
   } else if ($currentPage === "splash") {
-    buttons = config1;
+    if ($interfaceModal) {
+      buttons = config1;
+    } else {
+      buttons = config0;
+    }
   } else {
     if ($currentPage === "shop") {
       if ($interfaceModal) {

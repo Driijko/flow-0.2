@@ -13,10 +13,3 @@
 >
   <MenuIcon />
 </button>
-
-<style>
-  button {
-    width: 100px;
-    height: 100px;
-  }
-</style>

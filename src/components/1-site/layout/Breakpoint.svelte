@@ -33,7 +33,6 @@
         "100dvh" : `${100 - toolbarHeightMO}%`
       }
     >
-      <SiteMenuModalOpenerButton />
     </div>
     <div class="toolbar-container"
       style:height={

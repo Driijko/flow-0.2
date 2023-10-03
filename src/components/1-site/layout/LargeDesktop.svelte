@@ -62,6 +62,7 @@
   flex-direction: column;
   background-color: pink;
   transition: width 0.5s ease-out;
+  overflow: hidden;
 }
 .content-area {
   background-color: orange;

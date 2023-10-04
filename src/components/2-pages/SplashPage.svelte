@@ -1,6 +1,7 @@
 <!-- SCRIPTS ////////////////////////////////////////////// -->
 <script>
   // IMPORTS ----------------------------------------------
+  import { breakpoint } from "../../dynamic/breakpoint";
   import SiteMenuModalOpenerButton 
   from "../5-elements/modal/SiteMenuModalOpenerButton.svelte";
 
@@ -12,24 +13,27 @@
     <h1>FLOW</h1>
     <h2>A front-end web development framework</h2>
   </hgroup>
-  <SiteMenuModalOpenerButton />
+  {#if $breakpoint !== "large-desktop"}
+    <SiteMenuModalOpenerButton />
+  {/if}
 </div>
 
 <!-- STYLES //////////////////////////////////////////////// -->
 <style>
 div {
   flex-direction: column;
-  gap: 5vh;
+  gap: calc(var(--ch)/20);
 }
 hgroup {
   background-color: white;
   width: 100%;
   text-align: center;
+  font-size: calc(var(--cw)/20);
 }
 div :global(.site-menu-modal-opener-button) {
-  width: 20vw;
-  height: 20vw;
-  padding: 3vw;
+  width: calc(var(--cw)/10);
+  height: calc(var(--cw)/10);
+  padding: calc(var(--cw)/100);
   background-color: white;
 }
 </style>

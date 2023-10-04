@@ -4,11 +4,11 @@
   import { layout } from "../../../static/siteSettings";
   import { breakpoint } from "../../../dynamic/breakpoint";
   import { interfaceModal } from "../../../dynamic/modals";
+  import { currentPage } from "../../../dynamic/currentPage";
   import Toolbar from "../toolbar/Toolbar.svelte";
   import InterfaceModal from "../interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
-  import { currentPage } from "../../../dynamic/currentPage";
-  import SiteMenuModalOpenerButton from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
+  import BackgroundRouter from "../routers/BackgroundRouter.svelte";
 
   // DESTRUCTURING ----------------------------------
   const { toolbarHeightMO } = layout;
@@ -21,7 +21,7 @@
 <!-- MARKUP ///////////////////////////////////////////// -->
 <!-- Background ---------- -->
 <div class="vp-layer">
-
+  <BackgroundRouter />
 </div>
 
 <!-- MOBILE ----------------------------------------- -->
@@ -47,7 +47,7 @@
 
 <!-- SMALL DESKTOP ------------------------------------ -->
 {:else if localBreakpoint === "small-desktop"}
-  <div class="vp-layer content-container" inert={$interfaceModal}></div>
+  <!-- <div class="vp-layer content-container" inert={$interfaceModal}></div>
   <InterfaceModal />
   <div class="toolbar-container"
     style:position="absolute"
@@ -55,17 +55,9 @@
     style:right="0"
   >
     <Toolbar />
-  </div>
+  </div> -->
 
 <!-- LARGE DESKTOP ----------------------------------- -->
 {:else if localBreakpoint === "large-desktop"}
   <LargeDesktop />
 {/if}
-
-
-<!-- STYLES ///////////////////////////////////////////////////// -->
-<style>
-.content-container {
-  background-color: hsla(0, 100%, 50%, 1);
-}
-</style>

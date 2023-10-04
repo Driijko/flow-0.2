@@ -1,5 +1,8 @@
 <!-- SCRIPTS ///////////////////////////////////////// -->
 <script>
+  // IMPORTS ------------------------------------------
+  import { breakpoint } from "../../dynamic/breakpoint";
+
   // PROPS -------------------------------------------------
   export let src = {
     portrait: "",
@@ -11,7 +14,7 @@
 
 <!-- MARKUP //////////////////////////////////////////// -->
 <div class="fill" style:background-image={`url(${
-    window.innerWidth <= window.innerHeight ? src.portrait : src.landscape
+    $breakpoint === "mobile" ? src.portrait : src.landscape
   })`}
   style:animation-duration={`${duration}s`}
 ></div>
@@ -19,7 +22,7 @@
 <!-- STYLES //////////////////////////////////////////// -->
 <style>
 div {
-  background-size: 150% 150%;
+  background-size: 150%;
   background-position: 0% 0%;
   animation-name: backgroundShift;
   animation-timing-function: linear;

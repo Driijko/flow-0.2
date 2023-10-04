@@ -46,7 +46,7 @@
 <!-- STYLES ///////////////////////////////////////////////////// -->
 <style>
 .content-container {
-  background-color: hsla(0, 100%, 50%, 1);
+  /* background-color: hsla(0, 100%, 50%, 1); */
   transition-property: width, height;
   transition-timing-function: ease-out;
   transition-duration: 0.5s;
@@ -60,12 +60,12 @@
 }
 .interface-area {
   flex-direction: column;
-  background-color: pink;
+  background-color: hsla(0, 100%, 80%, 0.7);
   transition: width 0.5s ease-out;
   overflow: hidden;
 }
 .content-area {
-  background-color: orange;
+  /* background-color: orange; */
   transition: width 0.5s ease-out;
 }
 </style>

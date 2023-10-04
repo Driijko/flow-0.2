@@ -3,14 +3,14 @@
   // IMPORTS -----------------------------------------
   import { gsap } from "gsap";
   import { onMount } from "svelte";
-  import { interfaceModal, modals } from "../../../dynamic/modals";
+  import { interfaceArea, modals } from "../../../dynamic/modals";
   import { viewportCSSLD } from "../../../scripts/viewport/viewportCSS";
   import RightArrow from "../../6-icons/arrows/RightArrow.svelte";
   import { breakpoint } from "../../../dynamic/breakpoint";
 
   // EVENT HANDLERS -----------------------------------
   function handleClick() {
-    modals.toggle("interfaceModal");
+    modals.toggle("interfaceArea");
     viewportCSSLD();
   }
 
@@ -36,7 +36,7 @@
 
   // REACTIVE -------------------------------
   $: if (animation) {
-    if ($interfaceModal) {
+    if ($interfaceArea) {
       animation("open", 0.5);
     } else {
       animation("close", 0.5);
@@ -55,7 +55,7 @@
 
 <!-- MARKUP ///////////////////////////////////////// -->
 <button class="interface-area-button" type="button"
-  class:open={$interfaceModal}
+  class:open={$interfaceArea}
   class:no-display={noDisplay}
   on:click={handleClick}
 >

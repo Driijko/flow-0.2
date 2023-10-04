@@ -9,6 +9,7 @@
   import InterfaceModal from "../interface/InterfaceModal.svelte";
   import LargeDesktop from "./LargeDesktop.svelte";
   import BackgroundRouter from "../routers/BackgroundRouter.svelte";
+  import ContentRouter from "../routers/ContentRouter.svelte";
 
   // DESTRUCTURING ----------------------------------
   const { toolbarHeightMO } = layout;
@@ -33,6 +34,7 @@
         "100dvh" : `${100 - toolbarHeightMO}%`
       }
     >
+      <ContentRouter />
     </div>
     <div class="toolbar-container"
       style:height={
@@ -47,7 +49,9 @@
 
 <!-- SMALL DESKTOP ------------------------------------ -->
 {:else if localBreakpoint === "small-desktop"}
-  <!-- <div class="vp-layer content-container" inert={$interfaceModal}></div>
+  <div class="vp-layer content-container" inert={$interfaceModal}>
+    <ContentRouter />
+  </div>
   <InterfaceModal />
   <div class="toolbar-container"
     style:position="absolute"
@@ -55,7 +59,7 @@
     style:right="0"
   >
     <Toolbar />
-  </div> -->
+  </div>
 
 <!-- LARGE DESKTOP ----------------------------------- -->
 {:else if localBreakpoint === "large-desktop"}

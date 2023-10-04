@@ -1,5 +1,5 @@
 import { get } from "svelte/store";
-import { interfaceModal } from "../../dynamic/modals";
+import { interfaceArea } from "../../dynamic/modals";
 import { layout } from "../../static/siteSettings";
 import calcUARR from "../utils/calcUARR";
 
@@ -27,7 +27,7 @@ export function viewportCSSLD() {
 
   // Content -----
   const landscapeUARRContent = calcUARR(
-    get(interfaceModal) ? 
+    get(interfaceArea) ? 
       window.innerWidth * (1 - interfaceAreaWidthDecimal)* contentAreaPadding
       : window.innerWidth * contentAreaPadding,
     window.innerHeight * contentAreaPadding,

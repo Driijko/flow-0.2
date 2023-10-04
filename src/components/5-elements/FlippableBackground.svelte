@@ -13,9 +13,9 @@
 </script>
 
 <!-- MARKUP //////////////////////////////////////////// -->
-<div class="fill" style:background-image={`url(${
-    $breakpoint === "mobile" ? src.portrait : src.landscape
-  })`}
+<div class="fill" style:background-image={
+    `url(${ $breakpoint === "mobile" ? src.portrait : src.landscape})`
+  }
   style:animation-duration={`${duration}s`}
 ></div>
 

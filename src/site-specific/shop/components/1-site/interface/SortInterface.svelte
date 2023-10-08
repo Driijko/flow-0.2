@@ -1,10 +1,10 @@
 <!-- SCRIPTS /////////////////////////////////// -->
 <script>
   // IMPORTS --------------------------------
-  import { breakpoint }from "../../../dynamic/breakpoint";
-  import { modals } from "../../../dynamic/modals";
+  import { breakpoint }from "../../../../../dynamic/breakpoint";
+  import { modals } from "../../../../../dynamic/modals";
   import { productsSort } from "../../../dynamic/productsDisplay";
-  import InterfaceTransition from "./InterfaceTransition.svelte";
+  import InterfaceTransition from "../../../../../components/1-site/interface/InterfaceTransition.svelte";
 
   // EVENT HANDLERS ------------------------------------
   function handleClick(sortBy) {

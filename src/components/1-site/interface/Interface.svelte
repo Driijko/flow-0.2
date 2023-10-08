@@ -3,7 +3,7 @@
   // IMPORTS ---------------------------------------
   import { currentInterface } from "../../../dynamic/currentInterface";
   import SiteMenu from "./site-menu/SiteMenu.svelte";
-  import SortInterface from "./SortInterface.svelte";
+  import SortInterface from "../../../site-specific/shop/components/1-site/interface/SortInterface.svelte";
 
 </script>
 

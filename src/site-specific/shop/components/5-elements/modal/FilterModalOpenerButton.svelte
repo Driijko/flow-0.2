@@ -1,9 +1,9 @@
 <!-- SCRIPTS ////////////////////////////////////// -->
 <script>
   // IMPORTS -------------------------------------------
-  import modalOpen from "../../../scripts/modalOpen";
+  import modalOpen from "../../../../../scripts/modalOpen";
   import FilterIcon 
-  from "../../6-icons/interface/FilterIcon.svelte";
+  from "../../../../../components/6-icons/interface/FilterIcon.svelte";
 
 </script>
 

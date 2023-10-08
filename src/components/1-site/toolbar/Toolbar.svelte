@@ -3,7 +3,6 @@
   // IMPORTS ----------------------------------------------
   import { breakpoint } from "../../../dynamic/breakpoint";
   import { currentPage } from "../../../dynamic/currentPage";
-  import { shoppingList } from "../../../dynamic/shoppingList";
   import { interfaceModal } from "../../../dynamic/modals";
   import SiteMenuModalOpenerButton 
   from "../../5-elements/modal/SiteMenuModalOpenerButton.svelte";
@@ -12,12 +11,6 @@
   import ToolbarMOLD from "./ToolbarMOLD.svelte";
   import ToolbarSD from "./ToolbarSD.svelte";
   import InstagramLink from "../../5-elements/links/InstagramLink.svelte";
-  import ShopModalOpenerButton 
-  from "../../5-elements/modal/ShopModalOpenerButton.svelte";
-  import SortModalOpenerButton 
-  from "../../5-elements/modal/SortModalOpenerButton.svelte";
-  import FilterModalOpenerButton 
-  from "../../5-elements/modal/FilterModalOpenerButton.svelte";
   import InterfaceModalCloserButton 
   from "../../5-elements/modal/InterfaceModalCloserButton.svelte";
 
@@ -25,17 +18,6 @@
   // INTERFACE ELEMENTS ---------------------------------------
   const siteMenuToggleButton = { id: 0, component: SiteMenuModalToggleButton };
   const instagramLink = { id: 1, component: InstagramLink };
-  const shopButton = { id: 2, component: ShopModalOpenerButton };
-  const sortButton = { 
-    id: 3, 
-    component: SortModalOpenerButton,
-    highlight: "sort",
-  };
-  const filterButton = { 
-    id: 4, 
-    component: FilterModalOpenerButton,
-    highlight: "filter",
-  };
   const siteMenuOpenButton = { 
     id: 5, 
     component: SiteMenuModalOpenerButton,

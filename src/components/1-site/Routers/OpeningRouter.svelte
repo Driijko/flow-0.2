@@ -10,7 +10,6 @@
 <!-- MARKUP ///////////////////////////////////////////////// -->
 {#if $currentPage === "loading"}
   <LoadingPage />
-
 {:else}
   <Breakpoint />
 {/if}

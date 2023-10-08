@@ -70,9 +70,6 @@ div :global(.site-menu-tab-buttons button) {
   border-radius: 0 0 50% 50%;
   background-color: grey;
 }
-div :global(.site-menu-tab-buttons li .gap) {
-  width: 5%;
-}
 div :global(.site-menu-tab-buttons button.highlight) {
   background-color: red;
 }
@@ -158,12 +155,4 @@ div :global(.site-menu-tab-buttons button.highlight) {
 .site-menu.landscape :global(.site-menu-tab-buttons button svg) {
   height: 60%;
 }
-.site-menu.landscape :global(.shop-tab-button) {
-  font-size: calc(var(--iw)/50);
-  gap: calc(var(--iw)/100);
-}
-.site-menu.landscape :global(.site-menu-tab-buttons .shop-tab-button svg) {
-  width: 20%;
-}
-
 </style>

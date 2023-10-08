@@ -2,7 +2,7 @@
 <script>
   // IMPORTS -------------------------------------------------
   import { audioBkgTogglePausePlay, audioBkgPaused } 
-  from "../../../dynamic/audioBkg";
+  from "../../../components-site-specific/background-audio/dynamic/audioBkg";
   
 </script>
 

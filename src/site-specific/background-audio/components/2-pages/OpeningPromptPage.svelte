@@ -4,9 +4,9 @@
   import SiteSettings from "../4-structures/BackgroundAudio.svelte";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-  import { setPageExit, newPage } from "../../dynamic/currentPage";
+  import { setPageExit, newPage } from "../../../../dynamic/currentPage";
   import { audioBkgLoad, audioBkgLoadPlay, audioBkgPaused } 
-  from "../../dynamic/audioBkg";
+  from "../../../../components-site-specific/background-audio/dynamic/audioBkg";
 
   // ANIMATION --------------------------------------------------
   function pageEntrance() {

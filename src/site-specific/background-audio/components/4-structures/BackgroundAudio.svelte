@@ -1,11 +1,11 @@
 <!-- SCRIPTS /////////////////////////////////////////////// -->
 <script>
   // IMPORTS ------------------------------------------
-  import { audioBkgPaused } from "../../dynamic/audioBkg";
+  import { audioBkgPaused } from "../../../../components-site-specific/background-audio/dynamic/audioBkg";
   import AudioBkgCheckbox 
-  from "../5-elements/audio-bkg/AudioBkgCheckbox.svelte";
+  from "../../../../components/5-elements/audio-bkg/AudioBkgCheckbox.svelte";
   import AudioBkgVolumeSlider 
-  from "../5-elements/audio-bkg/AudioBkgVolumeSlider.svelte";
+  from "../../../../components/5-elements/audio-bkg/AudioBkgVolumeSlider.svelte";
 
 </script>
 

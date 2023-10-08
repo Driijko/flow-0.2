@@ -5,9 +5,9 @@
     audioBkgUpdateCurrentPlaylistIndex, audioBkgLoad,
     audioBkgNewPlaylist, audioBkgCurrentPlaylist, audioBkgLoop,
     audioBkgSetLoop, audioBkgLoadPlay
-  } from "../../../dynamic/audioBkg";
+  } from "../../../components-site-specific/background-audio/dynamic/audioBkg";
   import AudioBkgPlayer from "./AudioBkgPlayer.svelte";
-  import playlists from "../../../static/playlists";
+  import playlists from "../../../components-site-specific/background-audio/static/playlists";
 
   // PROPS -----------------------------------------
   export let identifier = "";

@@ -2,7 +2,7 @@
 <script>
   // IMPORTS ----------------------------
   import { audioBkgAdjustVolume, audioBkgVolume } 
-  from "../../../dynamic/audioBkg";
+  from "../../../components-site-specific/background-audio/dynamic/audioBkg";
 
   // PROPS ----------------------------------
   export let axis = "horizontal";
